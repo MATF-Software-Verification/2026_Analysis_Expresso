@@ -1,0 +1,35 @@
+diff --git a/Expresso/CMakeLists.txt b/Expresso/CMakeLists.txt
+index 69622ee..d3b0b68 100644
+--- a/Expresso/CMakeLists.txt
++++ b/Expresso/CMakeLists.txt
+@@ -8,8 +8,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+ 
+ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -Wextra")
+ 
+-set(CMAKE_PREFIX_PATH "/home/jelena/Qt/6.6.3/gcc_64/lib/cmake")
+-set(Qt6_DIR "/home/jelena/Qt/6.6.3/gcc_64/lib/cmake")
++# Removed machine specific Qt paths so the project can use the local Qt6 installation
+ 
+ set(CMAKE_INCLUDE_CURRENT_DIR ON)
+ 
+@@ -21,11 +20,6 @@ set(CMAKE_AUTORCC ON)
+ find_package(Qt6 COMPONENTS Core Gui Widgets REQUIRED)
+ 
+ 
+-include_directories("/home/jelena/Qt/6.6.3/gcc_64/include")
+-
+-
+-
+-
+ set(SOURCES
+ 	src/artikl.cpp
+ 	src/binaryserializer.cpp
+@@ -87,7 +81,7 @@ install(TARGETS ${PROJECT_NAME} DESTINATION /opt/${PROJECT_NAME}/bin)
+ 
+ 
+ 
+-include_directories(/home/jelena/Expresso/tests)
++include_directories(${CMAKE_CURRENT_SOURCE_DIR}/tests)
+ 
+ if(CMAKE_BUILD_TYPE STREQUAL "Coverage")
+     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage")
