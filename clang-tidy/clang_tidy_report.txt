@@ -1,0 +1,1515 @@
+Enabled checks:
+    bugprone-argument-comment
+    bugprone-assert-side-effect
+    bugprone-assignment-in-if-condition
+    bugprone-bad-signal-to-kill-thread
+    bugprone-bitwise-pointer-cast
+    bugprone-bool-pointer-implicit-conversion
+    bugprone-branch-clone
+    bugprone-capturing-this-in-member-variable
+    bugprone-casting-through-void
+    bugprone-chained-comparison
+    bugprone-compare-pointer-to-member-virtual-function
+    bugprone-copy-constructor-init
+    bugprone-crtp-constructor-accessibility
+    bugprone-dangling-handle
+    bugprone-dynamic-static-initializers
+    bugprone-easily-swappable-parameters
+    bugprone-empty-catch
+    bugprone-exception-escape
+    bugprone-fold-init-type
+    bugprone-forward-declaration-namespace
+    bugprone-forwarding-reference-overload
+    bugprone-implicit-widening-of-multiplication-result
+    bugprone-inaccurate-erase
+    bugprone-inc-dec-in-conditions
+    bugprone-incorrect-enable-if
+    bugprone-incorrect-enable-shared-from-this
+    bugprone-incorrect-roundings
+    bugprone-infinite-loop
+    bugprone-integer-division
+    bugprone-lambda-function-name
+    bugprone-macro-parentheses
+    bugprone-macro-repeated-side-effects
+    bugprone-misleading-setter-of-reference
+    bugprone-misplaced-operator-in-strlen-in-alloc
+    bugprone-misplaced-pointer-arithmetic-in-alloc
+    bugprone-misplaced-widening-cast
+    bugprone-move-forwarding-reference
+    bugprone-multi-level-implicit-pointer-conversion
+    bugprone-multiple-new-in-one-expression
+    bugprone-multiple-statement-macro
+    bugprone-narrowing-conversions
+    bugprone-no-escape
+    bugprone-non-zero-enum-to-bool-conversion
+    bugprone-nondeterministic-pointer-iteration-order
+    bugprone-not-null-terminated-result
+    bugprone-optional-value-conversion
+    bugprone-parent-virtual-call
+    bugprone-pointer-arithmetic-on-polymorphic-object
+    bugprone-posix-return
+    bugprone-redundant-branch-condition
+    bugprone-reserved-identifier
+    bugprone-return-const-ref-from-parameter
+    bugprone-shared-ptr-array-mismatch
+    bugprone-signal-handler
+    bugprone-signed-char-misuse
+    bugprone-sizeof-container
+    bugprone-sizeof-expression
+    bugprone-spuriously-wake-up-functions
+    bugprone-standalone-empty
+    bugprone-string-constructor
+    bugprone-string-integer-assignment
+    bugprone-string-literal-with-embedded-nul
+    bugprone-stringview-nullptr
+    bugprone-suspicious-enum-usage
+    bugprone-suspicious-include
+    bugprone-suspicious-memory-comparison
+    bugprone-suspicious-memset-usage
+    bugprone-suspicious-missing-comma
+    bugprone-suspicious-realloc-usage
+    bugprone-suspicious-semicolon
+    bugprone-suspicious-string-compare
+    bugprone-suspicious-stringview-data-usage
+    bugprone-swapped-arguments
+    bugprone-switch-missing-default-case
+    bugprone-tagged-union-member-count
+    bugprone-terminating-continue
+    bugprone-throw-keyword-missing
+    bugprone-too-small-loop-variable
+    bugprone-unchecked-optional-access
+    bugprone-undefined-memory-manipulation
+    bugprone-undelegated-constructor
+    bugprone-unhandled-exception-at-new
+    bugprone-unhandled-self-assignment
+    bugprone-unintended-char-ostream-output
+    bugprone-unique-ptr-array-mismatch
+    bugprone-unsafe-functions
+    bugprone-unused-local-non-trivial-variable
+    bugprone-unused-raii
+    bugprone-unused-return-value
+    bugprone-use-after-move
+    bugprone-virtual-near-miss
+    clang-analyzer-apiModeling.Errno
+    clang-analyzer-apiModeling.TrustNonnull
+    clang-analyzer-apiModeling.TrustReturnsNonnull
+    clang-analyzer-apiModeling.google.GTest
+    clang-analyzer-apiModeling.llvm.CastValue
+    clang-analyzer-apiModeling.llvm.ReturnValue
+    clang-analyzer-core.BitwiseShift
+    clang-analyzer-core.CallAndMessage
+    clang-analyzer-core.CallAndMessageModeling
+    clang-analyzer-core.DereferenceModeling
+    clang-analyzer-core.DivideZero
+    clang-analyzer-core.DynamicTypePropagation
+    clang-analyzer-core.FixedAddressDereference
+    clang-analyzer-core.NonNullParamChecker
+    clang-analyzer-core.NonnilStringConstants
+    clang-analyzer-core.NullDereference
+    clang-analyzer-core.StackAddrEscapeBase
+    clang-analyzer-core.StackAddressEscape
+    clang-analyzer-core.UndefinedBinaryOperatorResult
+    clang-analyzer-core.VLASize
+    clang-analyzer-core.builtin.AssumeModeling
+    clang-analyzer-core.builtin.BuiltinFunctions
+    clang-analyzer-core.builtin.NoReturnFunctions
+    clang-analyzer-core.uninitialized.ArraySubscript
+    clang-analyzer-core.uninitialized.Assign
+    clang-analyzer-core.uninitialized.Branch
+    clang-analyzer-core.uninitialized.CapturedBlockVariable
+    clang-analyzer-core.uninitialized.NewArraySize
+    clang-analyzer-core.uninitialized.UndefReturn
+    clang-analyzer-cplusplus.ArrayDelete
+    clang-analyzer-cplusplus.InnerPointer
+    clang-analyzer-cplusplus.Move
+    clang-analyzer-cplusplus.NewDelete
+    clang-analyzer-cplusplus.NewDeleteLeaks
+    clang-analyzer-cplusplus.PlacementNew
+    clang-analyzer-cplusplus.PureVirtualCall
+    clang-analyzer-cplusplus.SelfAssignment
+    clang-analyzer-cplusplus.SmartPtrModeling
+    clang-analyzer-cplusplus.StringChecker
+    clang-analyzer-deadcode.DeadStores
+    clang-analyzer-fuchsia.HandleChecker
+    clang-analyzer-nullability.NullPassedToNonnull
+    clang-analyzer-nullability.NullReturnedFromNonnull
+    clang-analyzer-nullability.NullableDereferenced
+    clang-analyzer-nullability.NullablePassedToNonnull
+    clang-analyzer-nullability.NullableReturnedFromNonnull
+    clang-analyzer-optin.core.EnumCastOutOfRange
+    clang-analyzer-optin.cplusplus.UninitializedObject
+    clang-analyzer-optin.cplusplus.VirtualCall
+    clang-analyzer-optin.mpi.MPI-Checker
+    clang-analyzer-optin.osx.OSObjectCStyleCast
+    clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker
+    clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker
+    clang-analyzer-optin.performance.GCDAntipattern
+    clang-analyzer-optin.performance.Padding
+    clang-analyzer-optin.portability.UnixAPI
+    clang-analyzer-optin.taint.GenericTaint
+    clang-analyzer-optin.taint.TaintPropagation
+    clang-analyzer-optin.taint.TaintedAlloc
+    clang-analyzer-optin.taint.TaintedDiv
+    clang-analyzer-osx.API
+    clang-analyzer-osx.MIG
+    clang-analyzer-osx.NSOrCFErrorDerefChecker
+    clang-analyzer-osx.NumberObjectConversion
+    clang-analyzer-osx.OSObjectRetainCount
+    clang-analyzer-osx.ObjCProperty
+    clang-analyzer-osx.SecKeychainAPI
+    clang-analyzer-osx.cocoa.AtSync
+    clang-analyzer-osx.cocoa.AutoreleaseWrite
+    clang-analyzer-osx.cocoa.ClassRelease
+    clang-analyzer-osx.cocoa.Dealloc
+    clang-analyzer-osx.cocoa.IncompatibleMethodTypes
+    clang-analyzer-osx.cocoa.Loops
+    clang-analyzer-osx.cocoa.MissingSuperCall
+    clang-analyzer-osx.cocoa.NSAutoreleasePool
+    clang-analyzer-osx.cocoa.NSError
+    clang-analyzer-osx.cocoa.NilArg
+    clang-analyzer-osx.cocoa.NonNilReturnValue
+    clang-analyzer-osx.cocoa.ObjCGenerics
+    clang-analyzer-osx.cocoa.RetainCount
+    clang-analyzer-osx.cocoa.RetainCountBase
+    clang-analyzer-osx.cocoa.RunLoopAutoreleaseLeak
+    clang-analyzer-osx.cocoa.SelfInit
+    clang-analyzer-osx.cocoa.SuperDealloc
+    clang-analyzer-osx.cocoa.UnusedIvars
+    clang-analyzer-osx.cocoa.VariadicMethodTypes
+    clang-analyzer-osx.coreFoundation.CFError
+    clang-analyzer-osx.coreFoundation.CFNumber
+    clang-analyzer-osx.coreFoundation.CFRetainRelease
+    clang-analyzer-osx.coreFoundation.containers.OutOfBounds
+    clang-analyzer-osx.coreFoundation.containers.PointerSizedValues
+    clang-analyzer-security.ArrayBound
+    clang-analyzer-security.FloatLoopCounter
+    clang-analyzer-security.MmapWriteExec
+    clang-analyzer-security.PointerSub
+    clang-analyzer-security.PutenvStackArray
+    clang-analyzer-security.SetgidSetuidOrder
+    clang-analyzer-security.cert.env.InvalidPtr
+    clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling
+    clang-analyzer-security.insecureAPI.SecuritySyntaxChecker
+    clang-analyzer-security.insecureAPI.UncheckedReturn
+    clang-analyzer-security.insecureAPI.bcmp
+    clang-analyzer-security.insecureAPI.bcopy
+    clang-analyzer-security.insecureAPI.bzero
+    clang-analyzer-security.insecureAPI.decodeValueOfObjCType
+    clang-analyzer-security.insecureAPI.getpw
+    clang-analyzer-security.insecureAPI.gets
+    clang-analyzer-security.insecureAPI.mkstemp
+    clang-analyzer-security.insecureAPI.mktemp
+    clang-analyzer-security.insecureAPI.rand
+    clang-analyzer-security.insecureAPI.strcpy
+    clang-analyzer-security.insecureAPI.vfork
+    clang-analyzer-unix.API
+    clang-analyzer-unix.BlockInCriticalSection
+    clang-analyzer-unix.Chroot
+    clang-analyzer-unix.DynamicMemoryModeling
+    clang-analyzer-unix.Errno
+    clang-analyzer-unix.Malloc
+    clang-analyzer-unix.MallocSizeof
+    clang-analyzer-unix.MismatchedDeallocator
+    clang-analyzer-unix.StdCLibraryFunctions
+    clang-analyzer-unix.Stream
+    clang-analyzer-unix.Vfork
+    clang-analyzer-unix.cstring.BadSizeArg
+    clang-analyzer-unix.cstring.CStringModeling
+    clang-analyzer-unix.cstring.NotNullTerminated
+    clang-analyzer-unix.cstring.NullArg
+    clang-analyzer-valist.CopyToSelf
+    clang-analyzer-valist.Uninitialized
+    clang-analyzer-valist.Unterminated
+    clang-analyzer-valist.ValistBase
+    clang-analyzer-webkit.NoUncountedMemberChecker
+    clang-analyzer-webkit.RefCntblBaseVirtualDtor
+    clang-analyzer-webkit.UncountedLambdaCapturesChecker
+    modernize-avoid-bind
+    modernize-avoid-c-arrays
+    modernize-concat-nested-namespaces
+    modernize-deprecated-headers
+    modernize-deprecated-ios-base-aliases
+    modernize-loop-convert
+    modernize-macro-to-enum
+    modernize-make-shared
+    modernize-make-unique
+    modernize-min-max-use-initializer-list
+    modernize-pass-by-value
+    modernize-raw-string-literal
+    modernize-redundant-void-arg
+    modernize-replace-auto-ptr
+    modernize-replace-disallow-copy-and-assign-macro
+    modernize-replace-random-shuffle
+    modernize-return-braced-init-list
+    modernize-shrink-to-fit
+    modernize-type-traits
+    modernize-unary-static-assert
+    modernize-use-auto
+    modernize-use-bool-literals
+    modernize-use-constraints
+    modernize-use-default-member-init
+    modernize-use-designated-initializers
+    modernize-use-emplace
+    modernize-use-equals-default
+    modernize-use-equals-delete
+    modernize-use-integer-sign-comparison
+    modernize-use-nodiscard
+    modernize-use-noexcept
+    modernize-use-nullptr
+    modernize-use-override
+    modernize-use-ranges
+    modernize-use-scoped-lock
+    modernize-use-starts-ends-with
+    modernize-use-std-format
+    modernize-use-std-numbers
+    modernize-use-std-print
+    modernize-use-trailing-return-type
+    modernize-use-transparent-functors
+    modernize-use-uncaught-exceptions
+    modernize-use-using
+    performance-avoid-endl
+    performance-enum-size
+    performance-faster-string-find
+    performance-for-range-copy
+    performance-implicit-conversion-in-loop
+    performance-inefficient-algorithm
+    performance-inefficient-string-concatenation
+    performance-inefficient-vector-operation
+    performance-move-const-arg
+    performance-move-constructor-init
+    performance-no-automatic-move
+    performance-no-int-to-ptr
+    performance-noexcept-destructor
+    performance-noexcept-move-constructor
+    performance-noexcept-swap
+    performance-trivially-destructible
+    performance-type-promotion-in-math-fn
+    performance-unnecessary-copy-initialization
+    performance-unnecessary-value-param
+    readability-ambiguous-smartptr-reset-call
+    readability-avoid-const-params-in-decls
+    readability-avoid-nested-conditional-operator
+    readability-avoid-return-with-void-value
+    readability-avoid-unconditional-preprocessor-if
+    readability-braces-around-statements
+    readability-const-return-type
+    readability-container-contains
+    readability-container-data-pointer
+    readability-container-size-empty
+    readability-convert-member-functions-to-static
+    readability-delete-null-pointer
+    readability-duplicate-include
+    readability-else-after-return
+    readability-enum-initial-value
+    readability-function-cognitive-complexity
+    readability-function-size
+    readability-identifier-length
+    readability-identifier-naming
+    readability-implicit-bool-conversion
+    readability-inconsistent-declaration-parameter-name
+    readability-isolate-declaration
+    readability-magic-numbers
+    readability-make-member-function-const
+    readability-math-missing-parentheses
+    readability-misleading-indentation
+    readability-misplaced-array-index
+    readability-named-parameter
+    readability-non-const-parameter
+    readability-operators-representation
+    readability-qualified-auto
+    readability-redundant-access-specifiers
+    readability-redundant-casting
+    readability-redundant-control-flow
+    readability-redundant-declaration
+    readability-redundant-function-ptr-dereference
+    readability-redundant-inline-specifier
+    readability-redundant-member-init
+    readability-redundant-preprocessor
+    readability-redundant-smartptr-get
+    readability-redundant-string-cstr
+    readability-redundant-string-init
+    readability-reference-to-constructed-temporary
+    readability-simplify-boolean-expr
+    readability-simplify-subscript-expr
+    readability-static-accessed-through-instance
+    readability-static-definition-in-anonymous-namespace
+    readability-string-compare
+    readability-suspicious-call-argument
+    readability-uniqueptr-delete-release
+    readability-uppercase-literal-suffix
+    readability-use-anyofallof
+    readability-use-concise-preprocessor-directives
+    readability-use-std-min-max
+
+Running clang-tidy for 16 files out of 33 in compilation database ...
+[ 1/16][89.2s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/main.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/main.cpp:6:5: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+    6 | int main(int argc, char *argv[]) {
+      | ~~~ ^
+      | auto                             -> int
+/home/valen/2026_Analysis_Expresso/Expresso/src/main.cpp:7:16: warning: variable name 'a' is too short, expected at least 3 characters [readability-identifier-length]
+    7 |   QApplication a(argc, argv);
+      |                ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/main.cpp:8:14: warning: variable name 'gl' is too short, expected at least 3 characters [readability-identifier-length]
+    8 |   GlavniMeni gl;
+      |              ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/main.cpp:11:10: warning: static member accessed through instance [readability-static-accessed-through-instance]
+   11 |   return a.exec();
+      |          ^~
+      |          QApplication::
+117433 warnings generated.
+Suppressed 117429 warnings (117429 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[ 2/16][173.5s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/artikl.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.cpp:3:16: warning: pass by value and use std::move [modernize-pass-by-value]
+    2 | 
+    3 | Artikl::Artikl(const QString &_naziv, double _cena, const QString &_kategorija,
+      |                ^~~~~~~~~~~~~~~
+      |                QString 
+    4 |                int _kolicina)
+    5 |     : naziv(_naziv), cena(_cena), kategorija(_kategorija), kolicina(_kolicina) {
+      |                   
+      |             std::move( )
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.cpp:3:53: warning: pass by value and use std::move [modernize-pass-by-value]
+    3 | Artikl::Artikl(const QString &_naziv, double _cena, const QString &_kategorija,
+      |                                                     ^~~~~~~~~~~~~~~
+      |                                                     QString 
+    4 |                int _kolicina)
+    5 |     : naziv(_naziv), cena(_cena), kategorija(_kategorija), kolicina(_kolicina) {
+      |                                                         
+      |                                              std::move( )
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.cpp:7:9: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+    7 | Artikl::~Artikl() {}
+      |         ^         ~~
+      |                   = default;
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.cpp:9:17: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+    9 | QString Artikl::getNaziv() const { return naziv; }
+      | ~~~~~~~         ^
+      | auto                             -> QString
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.cpp:10:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   10 | double Artikl::getCena() const { return cena; }
+      | ~~~~~~         ^
+      | auto                           -> double
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.cpp:11:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   11 | int Artikl::getKolicina() const { return kolicina; }
+      | ~~~         ^
+      | auto                            -> int
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.cpp:12:17: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   12 | QString Artikl::getKategorija() const { return kategorija; }
+      | ~~~~~~~         ^
+      | auto                                  -> QString
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.cpp:14:49: warning: parameter '_naziv' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+    2 | 
+    3 | Artikl::Artikl(const QString &_naziv, double _cena, const QString &_kategorija,
+    4 |                int _kolicina)
+    5 |     : naziv(_naziv), cena(_cena), kategorija(_kategorija), kolicina(_kolicina) {
+    6 | }
+    7 | Artikl::~Artikl() {}
+    8 | 
+    9 | QString Artikl::getNaziv() const { return naziv; }
+   10 | double Artikl::getCena() const { return cena; }
+   11 | int Artikl::getKolicina() const { return kolicina; }
+   12 | QString Artikl::getKategorija() const { return kategorija; }
+   13 | 
+   14 | void Artikl::setNaziv(QString _naziv) { naziv = _naziv; }
+      |                                                 ^     
+      |                                                 std::move( )
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.cpp:18:42: warning: the const qualified parameter '_kategorija' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   18 | void Artikl::setKategorija(const QString _kategorija) {
+      |                                          ^
+      |                                         &
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.cpp:22:14: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   22 | bool Artikl::operator==(Artikl &a) const {
+      | ~~~~         ^
+      | auto                                     -> bool
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.cpp:22:33: warning: parameter name 'a' is too short, expected at least 3 characters [readability-identifier-length]
+   22 | bool Artikl::operator==(Artikl &a) const {
+      |                                 ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.cpp:27:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   27 | QVariant Artikl::toVariant() const {
+      | ~~~~~~~~         ^
+      | auto                               -> QVariant
+101396 warnings generated.
+202792 warnings generated.
+Suppressed 202768 warnings (202768 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[ 3/16][188.1s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/binaryserializer.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/binaryserializer.cpp:8:36: warning: pass by value and use std::move [modernize-pass-by-value]
+    7 | 
+    8 | BinarySerializer::BinarySerializer(const QString &dirPath)
+      |                                    ^~~~~~~~~~~~~~~
+      |                                    QString 
+    9 |     : m_dirPath(dirPath) {}
+      |                        
+      |                 std::move( )
+/home/valen/2026_Analysis_Expresso/Expresso/src/binaryserializer.cpp:22:18: warning: do not use 'std::endl' with streams; use '\n' instead [performance-avoid-endl]
+   22 |               << std::endl;
+      |                  ^~~~~~~~~
+      |                  '\n'
+/home/valen/2026_Analysis_Expresso/Expresso/src/binaryserializer.cpp:37:47: warning: do not use 'std::endl' with streams; use '\n' instead [performance-avoid-endl]
+   37 |     std::cerr << "directory doesn't exist" << std::endl;
+      |                                               ^~~~~~~~~
+      |                                               '\n'
+/home/valen/2026_Analysis_Expresso/Expresso/src/binaryserializer.cpp:44:18: warning: do not use 'std::endl' with streams; use '\n' instead [performance-avoid-endl]
+   44 |               << std::endl;
+      |                  ^~~~~~~~~
+      |                  '\n'
+105628 warnings generated.
+211256 warnings generated.
+Suppressed 211248 warnings (211248 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[ 4/16][190.7s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/help.cpp
+113180 warnings generated.
+226360 warnings generated.
+Suppressed 226360 warnings (226360 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[ 5/16][197.3s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp:68:10: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+   68 |     if (!promena) {
+      |         ~^      
+      |                  == 0
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp:76:40: warning: parameter name 'tw' is too short, expected at least 3 characters [readability-identifier-length]
+   76 | void Naruci::addItemInTW(QTableWidget *tw, Artikl *artikl) {
+      |                                        ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp:98:7: warning: implicit conversion 'Sto *' -> 'bool' [readability-implicit-bool-conversion]
+   98 |   if (p->getSto()) {
+      |       ^          
+      |                   != nullptr
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp:102:14: warning: method 'updateItemInTW' can be made static [readability-convert-member-functions-to-static]
+  102 | void Naruci::updateItemInTW(QTableWidget *tw, const QString &naziv) {
+      |              ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp:102:43: warning: parameter name 'tw' is too short, expected at least 3 characters [readability-identifier-length]
+  102 | void Naruci::updateItemInTW(QTableWidget *tw, const QString &naziv) {
+      |                                           ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp:135:11: warning: implicit conversion 'QTableWidgetItem *' -> 'bool' [readability-implicit-bool-conversion]
+  135 |       if (item) {
+      |           ^   
+      |                != nullptr
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp:143:47: warning: statement should be inside braces [readability-braces-around-statements]
+  143 |   if (ui->twOrderOrderDialog->rowCount() == 0)
+      |                                               ^
+      |                                                {
+  144 |     p->getSto()->setStatus(Sto::AVAILABLE);
+      |                                            
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp:154:10: warning: 'auto artikl' can be declared as 'auto *artikl' [readability-qualified-auto]
+  154 |     for (auto artikl : artikli) {
+      |          ^~~~
+      |          auto *
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp:183:11: warning: implicit conversion 'QTableWidgetItem *' -> 'bool' [readability-implicit-bool-conversion]
+  183 |       if (itemName && itemPrice && itemQuantity) {
+      |           ^
+      |           (        != nullptr)
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp:183:23: warning: implicit conversion 'QTableWidgetItem *' -> 'bool' [readability-implicit-bool-conversion]
+  183 |       if (itemName && itemPrice && itemQuantity) {
+      |                       ^
+      |                       (         != nullptr)
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp:183:36: warning: implicit conversion 'QTableWidgetItem *' -> 'bool' [readability-implicit-bool-conversion]
+  183 |       if (itemName && itemPrice && itemQuantity) {
+      |                                    ^           
+      |                                    (            != nullptr)
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp:188:13: warning: implicit conversion 'Artikl *' -> 'bool' [readability-implicit-bool-conversion]
+  188 |         if (artikl) {
+      |             ^     
+      |                    != nullptr
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.h:27:8: warning: function 'Naruci::updateItemInTW' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
+   27 |   void updateItemInTW(QTableWidget *tw, const QString &str);
+      |        ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.cpp:102:14: note: the definition seen here
+  102 | void Naruci::updateItemInTW(QTableWidget *tw, const QString &naziv) {
+      |              ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/naruci.h:27:8: note: differing parameters are named here: ('str'), in definition: ('naziv')
+   27 |   void updateItemInTW(QTableWidget *tw, const QString &str);
+      |        ^                                               ~~~
+      |                                                        naziv
+123434 warnings generated.
+246868 warnings generated.
+Suppressed 246842 warnings (246842 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[ 6/16][198.3s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/raspored.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/raspored.cpp:9:20: warning: pass by value and use std::move [modernize-pass-by-value]
+    8 | 
+    9 | Raspored::Raspored(const QString &rasporedName) : m_naziv(rasporedName) {
+      |                    ^~~~~~~~~~~~~~~                                    
+      |                    QString                                std::move(  )
+/home/valen/2026_Analysis_Expresso/Expresso/src/raspored.cpp:15:24: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   15 | QList<Sto *> Raspored::getItems() { return m_raspored; }
+      | ~~~~~~~~~~~~           ^
+      | auto                              -> QList<Sto *>
+/home/valen/2026_Analysis_Expresso/Expresso/src/raspored.cpp:17:20: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   17 | QVariant Raspored::toVariant() const {
+      | ~~~~~~~~           ^
+      | auto                                 -> QVariant
+/home/valen/2026_Analysis_Expresso/Expresso/src/raspored.cpp:49:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   49 | Sto *Raspored::addSto(Meni *menu) {
+      | ~~~~~          ^
+      | auto                              -> Sto *
+/home/valen/2026_Analysis_Expresso/Expresso/src/raspored.cpp:58:8: warning: 'auto sto' can be declared as 'auto *sto' [readability-qualified-auto]
+   58 |   for (auto sto : m_raspored) {
+      |        ^~~~
+      |        auto *
+/home/valen/2026_Analysis_Expresso/Expresso/src/raspored.cpp:82:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   82 | qint32 Raspored::getMaxTables() { return m_max_tables; }
+      | ~~~~~~           ^
+      | auto                            -> qint32
+/home/valen/2026_Analysis_Expresso/Expresso/src/raspored.cpp:82:18: warning: method 'getMaxTables' can be made const [readability-make-member-function-const]
+   82 | qint32 Raspored::getMaxTables() { return m_max_tables; }
+      |                  ^
+      |                                 const
+117500 warnings generated.
+235000 warnings generated.
+Suppressed 234986 warnings (234986 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[ 7/16][198.6s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:17:10: warning: inclusion of deprecated C++ header 'string.h'; consider using 'cstring' instead [modernize-deprecated-headers]
+   17 | #include <string.h>
+      |          ^~~~~~~~~~
+      |          <cstring>
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:19:17: warning: parameter name 'id' is too short, expected at least 3 characters [readability-identifier-length]
+   19 | Sto::Sto(qint32 id) : QGraphicsObject() {
+      |                 ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:19:23: warning: initializer for base class 'QGraphicsObject' is redundant [readability-redundant-member-init]
+   19 | Sto::Sto(qint32 id) : QGraphicsObject() {
+      |                       ^~~~~~~~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:21:13: warning: 150 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   21 |   m_width = 150;
+      |             ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:22:14: warning: 150 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   22 |   m_height = 150;
+      |              ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:27:29: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   27 |   m_color = QColor::fromRgb(128, 128, 128);
+      |                             ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:27:34: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   27 |   m_color = QColor::fromRgb(128, 128, 128);
+      |                                  ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:27:39: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   27 |   m_color = QColor::fromRgb(128, 128, 128);
+      |                                       ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:34:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   34 | QRectF Sto::boundingRect() const { return QRectF(0, 0, m_width, m_height); }
+      | ~~~~~~      ^
+      | auto                             -> QRectF
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:34:43: warning: avoid repeating the return type from the declaration; use a braced initializer list instead [modernize-return-braced-init-list]
+   34 | QRectF Sto::boundingRect() const { return QRectF(0, 0, m_width, m_height); }
+      |                                           ^~~~~~~                       ~
+      |                                           {                             }
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:45:23: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   45 |   QFont font("Arial", 10);
+      |                       ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:49:40: warning: statement should be inside braces [readability-braces-around-statements]
+   49 |   if (m_currentStatus == Sto::RESERVED)
+      |                                        ^
+      |                                         {
+   50 |     painter->drawText(boundingRect(), Qt::AlignRight | Qt::AlignTop,
+   51 |                       "Reserved ");
+      |                                    
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:53:21: warning: 15 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   53 |   font.setPointSize(15);
+      |                     ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:60:23: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   60 |     font.setPointSize(10);
+      |                       ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:64:42: warning: statement should be inside braces [readability-braces-around-statements]
+   64 |     if (m_currentStatus == Sto::RESERVED)
+      |                                          ^
+      |                                           {
+   65 |       painter->drawText(boundingRect(), Qt::AlignRight | Qt::AlignTop,
+   66 |                         "Reserved ");
+      |                                      
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:68:23: warning: 15 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   68 |     font.setPointSize(15);
+      |                       ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:75:31: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   75 |     m_color = QColor::fromRgb(128, 238, 128);
+      |                               ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:75:36: warning: 238 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   75 |     m_color = QColor::fromRgb(128, 238, 128);
+      |                                    ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:75:41: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   75 |     m_color = QColor::fromRgb(128, 238, 128);
+      |                                         ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:78:31: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   78 |     m_color = QColor::fromRgb(128, 128, 128);
+      |                               ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:78:36: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   78 |     m_color = QColor::fromRgb(128, 128, 128);
+      |                                    ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:78:41: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   78 |     m_color = QColor::fromRgb(128, 128, 128);
+      |                                         ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:91:11: warning: Value stored to 'newPosScene' during its initialization is never read [clang-analyzer-deadcode.DeadStores]
+   91 |   QPointF newPosScene = this->scenePos() + delta;
+      |           ^~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:91:11: note: Value stored to 'newPosScene' during its initialization is never read
+   91 |   QPointF newPosScene = this->scenePos() + delta;
+      |           ^~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:91:11: warning: unused variable 'newPosScene' [clang-diagnostic-unused-variable]
+   91 |   QPointF newPosScene = this->scenePos() + delta;
+      |           ^~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:100:59: warning: unused parameter 'event' [clang-diagnostic-unused-parameter]
+  100 | void Sto::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event) {
+      |                                                           ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:106:11: warning: variable name 'ua' is too short, expected at least 3 characters [readability-identifier-length]
+  106 |     auto *ua = new unesiartikle();
+      |           ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:109:15: warning: loop variable is copied but only used as const reference; consider making it a const reference [performance-for-range-copy]
+  109 |     for (auto kategorija : (m_meni->getKategorije()).keys()) {
+      |               ^
+      |          const  &
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:112:10: warning: 'auto artikl' can be declared as 'auto *artikl' [readability-qualified-auto]
+  112 |     for (auto artikl : _p->getArtikli()) {
+      |          ^~~~
+      |          auto *
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:124:11: warning: variable name 'to' is too short, expected at least 3 characters [readability-identifier-length]
+  124 |     auto *to = new TableOptions(nullptr, this);
+      |           ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:131:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  131 | qint32 Sto::getId() { return m_id; }
+      | ~~~~~~      ^
+      | auto                -> qint32
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:131:13: warning: method 'getId' can be made const [readability-make-member-function-const]
+  131 | qint32 Sto::getId() { return m_id; }
+      |             ^
+      |                     const
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:133:15: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  133 | QVariant Sto::toVariant() const {
+      | ~~~~~~~~      ^
+      | auto                            -> QVariant
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:158:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  158 | Porudzbina *Sto::getPorudzbina() { return _p; }
+      | ~~~~~~~~~~~~     ^
+      | auto                             -> Porudzbina *
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:162:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  162 | Meni *Sto::getMeni() { return m_meni; }
+      | ~~~~~~     ^
+      | auto                 -> Meni *
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:164:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  164 | Sto::Status Sto::getStatus() { return m_currentStatus; }
+      | ~~~~~~~~~~~      ^
+      | auto                         -> Sto::Status
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:168:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  168 | qint32 Sto::getNumSeats() { return m_numSeats; }
+      | ~~~~~~      ^
+      | auto                      -> qint32
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:168:13: warning: method 'getNumSeats' can be made const [readability-make-member-function-const]
+  168 | qint32 Sto::getNumSeats() { return m_numSeats; }
+      |             ^
+      |                           const
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:172:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  172 | qint32 Sto::getDegree() { return m_degree; }
+      | ~~~~~~      ^
+      | auto                    -> qint32
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:172:13: warning: method 'getDegree' can be made const [readability-make-member-function-const]
+  172 | qint32 Sto::getDegree() { return m_degree; }
+      |             ^
+      |                         const
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:176:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  176 | qint32 Sto::getWidth() { return m_width; }
+      | ~~~~~~      ^
+      | auto                   -> qint32
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:176:13: warning: method 'getWidth' can be made const [readability-make-member-function-const]
+  176 | qint32 Sto::getWidth() { return m_width; }
+      |             ^
+      |                        const
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:176:33: warning: narrowing conversion from 'qreal' (aka 'double') to 'qint32' (aka 'int') [bugprone-narrowing-conversions]
+  176 | qint32 Sto::getWidth() { return m_width; }
+      |                                 ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:178:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  178 | qint32 Sto::getHeight() { return m_height; }
+      | ~~~~~~      ^
+      | auto                    -> qint32
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:178:13: warning: method 'getHeight' can be made const [readability-make-member-function-const]
+  178 | qint32 Sto::getHeight() { return m_height; }
+      |             ^
+      |                         const
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:178:34: warning: narrowing conversion from 'qreal' (aka 'double') to 'qint32' (aka 'int') [bugprone-narrowing-conversions]
+  178 | qint32 Sto::getHeight() { return m_height; }
+      |                                  ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:186:13: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  186 | QColor Sto::getColor() { return m_color; }
+      | ~~~~~~      ^
+      | auto                   -> QColor
+125438 warnings generated.
+250876 warnings generated.
+Suppressed 250784 warnings (250784 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[ 8/16][204.0s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:29:3: warning: use range-based for loop instead [modernize-loop-convert]
+   29 |   for (unsigned int i = 0; i < skladisteArtikala.size(); ++i) {
+      |   ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |       (auto & i : skladisteArtikala)
+   30 |     if (skladisteArtikala[i].getNaziv() == ime) {
+      |         ~~~~~~~~~~~~~~~~~~~~
+      |         i
+   31 |       postojiArtikal = true;
+   32 |       QMessageBox msg;
+   33 |       msg.setText("Item already exists. Do you want to update its price?");
+   34 |       msg.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+   35 |       msg.setDefaultButton(QMessageBox::Yes);
+   36 |       unsigned int odgovor = msg.exec();
+   37 |       if (odgovor == QMessageBox::Yes) {
+   38 |         skladisteArtikala[i].setCena(cena);
+      |         ~~~~~~~~~~~~~~~~~~~~
+      |         i
+   39 |         dodajArtikal(skladisteArtikala[i]);
+      |                      ~~~~~~~~~~~~~~~~~~~~
+      |                      i
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:45:25: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+   45 |   if (postojiArtikal == false) {
+      |       ~~~~~~~~~~~~~~~~~~^~~~~
+      |       !postojiArtikal
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:53:35: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   53 | std::vector<Artikl> unesiartikle::getSkladisteArtikala() const {
+      | ~~~~~~~~~~~~~~~~~~~               ^
+      | auto                                                           -> std::vector<Artikl>
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:77:15: warning: variable name 'in' is too short, expected at least 3 characters [readability-identifier-length]
+   77 |   QTextStream in(&file);
+      |               ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:85:15: warning: the variable 'ime' is copy-constructed from a const reference but is only used as const reference; consider making it a const reference [performance-unnecessary-copy-initialization]
+   85 |       QString ime = tokens[0];
+      |               ^
+      |       const  &
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:87:15: warning: the variable 'kategorija' is copy-constructed from a const reference but is only used as const reference; consider making it a const reference [performance-unnecessary-copy-initialization]
+   87 |       QString kategorija = tokens[2];
+      |               ^
+      |       const  &
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:88:25: warning: use emplace_back instead of push_back [modernize-use-emplace]
+   88 |       skladisteArtikala.push_back(Artikl(ime, cena, kategorija));
+      |                         ^~~~~~~~~~~~~~~~~                     ~
+      |                         emplace_back(
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:102:20: warning: variable name 'a' is too short, expected at least 3 characters [readability-identifier-length]
+  102 |   for (const auto &a : skladisteArtikala) {
+      |                    ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:112:7: warning: variable 'row' set but not used [clang-diagnostic-unused-but-set-variable]
+  112 |   int row = 0;
+      |       ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:116:13: warning: Value stored to 'naziv' during its initialization is never read [clang-analyzer-deadcode.DeadStores]
+  116 |       auto *naziv = new QTableWidgetItem(artikal.getNaziv());
+      |             ^~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:116:13: note: Value stored to 'naziv' during its initialization is never read
+  116 |       auto *naziv = new QTableWidgetItem(artikal.getNaziv());
+      |             ^~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:116:13: warning: unused variable 'naziv' [clang-diagnostic-unused-variable]
+  116 |       auto *naziv = new QTableWidgetItem(artikal.getNaziv());
+      |             ^~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:117:13: warning: Value stored to 'cena' during its initialization is never read [clang-analyzer-deadcode.DeadStores]
+  117 |       auto *cena = new QTableWidgetItem(QString::number(artikal.getCena()));
+      |             ^~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:117:13: note: Value stored to 'cena' during its initialization is never read
+  117 |       auto *cena = new QTableWidgetItem(QString::number(artikal.getCena()));
+      |             ^~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:117:13: warning: unused variable 'cena' [clang-diagnostic-unused-variable]
+  117 |       auto *cena = new QTableWidgetItem(QString::number(artikal.getCena()));
+      |             ^~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:117:57: warning: Potential leak of memory pointed to by 'naziv' [clang-analyzer-cplusplus.NewDeleteLeaks]
+  117 |       auto *cena = new QTableWidgetItem(QString::number(artikal.getCena()));
+      |                                                         ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:115:9: note: Assuming the condition is true
+  115 |     if (artikal.getKategorija() == odabranaKategorija) {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:115:5: note: Taking true branch
+  115 |     if (artikal.getKategorija() == odabranaKategorija) {
+      |     ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:116:21: note: Memory is allocated
+  116 |       auto *naziv = new QTableWidgetItem(artikal.getNaziv());
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:117:57: note: Potential leak of memory pointed to by 'naziv'
+  117 |       auto *cena = new QTableWidgetItem(QString::number(artikal.getCena()));
+      |                                                         ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:123:7: warning: Potential leak of memory pointed to by 'cena' [clang-analyzer-cplusplus.NewDeleteLeaks]
+  123 |       ++row;
+      |       ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:115:9: note: Assuming the condition is true
+  115 |     if (artikal.getKategorija() == odabranaKategorija) {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:115:5: note: Taking true branch
+  115 |     if (artikal.getKategorija() == odabranaKategorija) {
+      |     ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:117:20: note: Memory is allocated
+  117 |       auto *cena = new QTableWidgetItem(QString::number(artikal.getCena()));
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:123:7: note: Potential leak of memory pointed to by 'cena'
+  123 |       ++row;
+      |       ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:128:18: warning: parameter name 'lw' is too short, expected at least 3 characters [readability-identifier-length]
+  128 |     QListWidget *lw, const QString &odabranaKategorija) {
+      |                  ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:129:7: warning: implicit conversion 'QListWidget *' -> 'bool' [readability-implicit-bool-conversion]
+  129 |   if (lw) {
+      |       ^ 
+      |          != nullptr
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:138:22: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  138 | double unesiartikle::cenaArtikla(const QString &_kategorija,
+      | ~~~~~~               ^
+      | auto
+  139 |                                  const QString &_naziv) {
+      |                                                         -> double
+/home/valen/2026_Analysis_Expresso/Expresso/src/unesiartikle.cpp:145:1: warning: non-void function does not return a value in all control paths [clang-diagnostic-return-type]
+  145 | }
+      | ^
+124103 warnings generated.
+248206 warnings generated.
+Suppressed 248160 warnings (248160 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[ 9/16][204.4s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/kategorija.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/kategorija.cpp:4:24: warning: pass by value and use std::move [modernize-pass-by-value]
+    2 | #include "artikl.h"
+    3 | 
+    4 | Kategorija::Kategorija(const QString &naziv) : _naziv(naziv) {}
+      |                        ^~~~~~~~~~~~~~~                     
+      |                        QString                        std::move( )
+/home/valen/2026_Analysis_Expresso/Expresso/src/kategorija.cpp:10:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   10 | QString Kategorija::getNaziv() { return _naziv; }
+      | ~~~~~~~             ^
+      | auto                           -> QString
+/home/valen/2026_Analysis_Expresso/Expresso/src/kategorija.cpp:12:17: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   12 | int Kategorija::dodajArtikl(Artikl *artikal) {
+      | ~~~             ^
+      | auto                                         -> int
+/home/valen/2026_Analysis_Expresso/Expresso/src/kategorija.cpp:14:8: warning: variable name 'it' is too short, expected at least 3 characters [readability-identifier-length]
+   14 |   auto it = _artikli.begin();
+      |        ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/kategorija.cpp:24:8: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+   24 |   if (!prom) {
+      |       ~^   
+      |             == 0
+/home/valen/2026_Analysis_Expresso/Expresso/src/kategorija.cpp:31:31: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   31 | QVector<Artikl *> Kategorija::getArtikli() { return _artikli; }
+      | ~~~~~~~~~~~~~~~~~             ^
+      | auto                                       -> QVector<Artikl *>
+/home/valen/2026_Analysis_Expresso/Expresso/src/kategorija.cpp:37:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   37 | Artikl *Kategorija::getArtiklByNaziv(const QString &naziv) {
+      | ~~~~~~~~            ^
+      | auto                                                       -> Artikl *
+/home/valen/2026_Analysis_Expresso/Expresso/src/kategorija.cpp:38:8: warning: 'const auto artikl' can be declared as 'auto *const artikl' [readability-qualified-auto]
+   38 |   for (const auto artikl : _artikli) {
+      |        ^~~~~~~~~~
+      |        auto *const 
+/home/valen/2026_Analysis_Expresso/Expresso/src/kategorija.cpp:39:37: warning: statement should be inside braces [readability-braces-around-statements]
+   39 |     if (artikl->getNaziv() == naziv)
+      |                                     ^
+      |                                      {
+   40 |       return artikl;
+      |                     
+/home/valen/2026_Analysis_Expresso/Expresso/src/kategorija.cpp:45:22: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   45 | QVariant Kategorija::toVariant() const {
+      | ~~~~~~~~             ^
+      | auto                                   -> QVariant
+/home/valen/2026_Analysis_Expresso/Expresso/src/kategorija.cpp:70:51: warning: parameter name 'tw' is too short, expected at least 3 characters [readability-identifier-length]
+   70 | void Kategorija::printInTableWidget(QTableWidget *tw) {
+      |                                                   ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/kategorija.cpp:81:8: warning: 'auto artikl' can be declared as 'auto *artikl' [readability-qualified-auto]
+   81 |   for (auto artikl : _artikli) {
+      |        ^~~~
+      |        auto *
+115542 warnings generated.
+231084 warnings generated.
+Suppressed 231060 warnings (231060 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[10/16][212.2s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/rasporeddata.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/rasporeddata.cpp:24:69: warning: do not use 'std::endl' with streams; use '\n' instead [performance-avoid-endl]
+   24 |     std::cout << "arrangement with the same name already exists" << std::endl;
+      |                                                                     ^~~~~~~~~
+      |                                                                     '\n'
+/home/valen/2026_Analysis_Expresso/Expresso/src/rasporeddata.cpp:33:68: warning: do not use 'std::endl' with streams; use '\n' instead [performance-avoid-endl]
+   33 |     std::cout << "arrangement with the same name doesn't exist" << std::endl;
+      |                                                                    ^~~~~~~~~
+      |                                                                    '\n'
+/home/valen/2026_Analysis_Expresso/Expresso/src/rasporeddata.cpp:53:25: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   53 | Raspored *RasporedData::getRaspored(const QString &name) const {
+      | ~~~~~~~~~~              ^
+      | auto                                                           -> Raspored *
+/home/valen/2026_Analysis_Expresso/Expresso/src/rasporeddata.cpp:76:8: warning: 'const auto raspored' can be declared as 'auto *const raspored' [readability-qualified-auto]
+   76 |   for (const auto raspored : *m_rasporedi) {
+      |        ^~~~~~~~~~
+      |        auto *const 
+122282 warnings generated.
+244564 warnings generated.
+Suppressed 244556 warnings (244556 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[11/16][212.5s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:15:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   15 | Sto *Porudzbina::getSto() { return _sto; }
+      | ~~~~~            ^
+      | auto                      -> Sto *
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:17:51: warning: parameter name 'tw' is too short, expected at least 3 characters [readability-identifier-length]
+   17 | void Porudzbina::printInTableWidget(QTableWidget *tw) {
+      |                                                   ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:28:8: warning: 'auto artikl' can be declared as 'auto *artikl' [readability-qualified-auto]
+   28 |   for (auto artikl : artikli) {
+      |        ^~~~
+      |        auto *
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:41:17: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   41 | int Porudzbina::dodajArtikl(Artikl *a) {
+      | ~~~             ^
+      | auto                                   -> int
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:41:37: warning: parameter name 'a' is too short, expected at least 3 characters [readability-identifier-length]
+   41 | int Porudzbina::dodajArtikl(Artikl *a) {
+      |                                     ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:44:8: warning: variable name 'it' is too short, expected at least 3 characters [readability-identifier-length]
+   44 |   auto it = artikli.begin();
+      |        ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:47:16: warning: ISO C++20 considers use of overloaded operator '==' (with operand types 'Artikl' and 'Artikl') to be ambiguous despite there being a unique best viable function [clang-diagnostic-ambiguous-reversed-operator]
+   47 |     if (*(*it) == *a) {
+      |         ~~~~~~ ^  ~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.h:25:8: note: ambiguity is between a regular call to this operator and a call with the argument order reversed
+   25 |   bool operator==(Artikl &a) const;
+      |        ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:50:11: warning: variable name 'k' is too short, expected at least 3 characters [readability-identifier-length]
+   50 |       int k = (*it)->getKolicina();
+      |           ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:64:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   64 | QString Porudzbina::racun(const QVector<Artikl *> &artikliZaIspis) {
+      | ~~~~~~~             ^
+      | auto                                                               -> QString
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:64:21: warning: method 'racun' can be made static [readability-convert-member-functions-to-static]
+   64 | QString Porudzbina::racun(const QVector<Artikl *> &artikliZaIspis) {
+      |                     ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:67:22: warning: variable name 'a' is too short, expected at least 3 characters [readability-identifier-length]
+   67 |   for (const Artikl *a : artikliZaIspis) {
+      |                      ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:79:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   79 | QString Porudzbina::ispisiCeoRacun() { return racun(artikli); }
+      | ~~~~~~~             ^
+      | auto                                 -> QString
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:82:8: warning: 'auto v' can be declared as 'auto *v' [readability-qualified-auto]
+   82 |   for (auto v : artikli) {
+      |        ^~~~
+      |        auto *
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:82:13: warning: variable name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   82 |   for (auto v : artikli) {
+      |             ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:89:31: warning: variable name 'it' is too short, expected at least 3 characters [readability-identifier-length]
+   89 |   QVector<Artikl *>::iterator it = artikli.begin();
+      |                               ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:101:31: warning: variable name 'it' is too short, expected at least 3 characters [readability-identifier-length]
+  101 |   QVector<Artikl *>::iterator it = artikli.begin();
+      |                               ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:103:16: warning: ISO C++20 considers use of overloaded operator '==' (with operand types 'Artikl' and 'Artikl') to be ambiguous despite there being a unique best viable function [clang-diagnostic-ambiguous-reversed-operator]
+  103 |     if (*(*it) == *artikal) {
+      |         ~~~~~~ ^  ~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/artikl.h:25:8: note: ambiguity is between a regular call to this operator and a call with the argument order reversed
+   25 |   bool operator==(Artikl &a) const;
+      |        ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:107:7: warning: do not use 'else' after 'return' [readability-else-after-return]
+  107 |     } else {
+      |       ^~~~~~
+  108 |       ++it;
+      |       ~~~~~
+  109 |     }
+      |     ~
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:113:31: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  113 | QVector<Artikl *> Porudzbina::getArtikli() { return artikli; }
+      | ~~~~~~~~~~~~~~~~~             ^
+      | auto                                       -> QVector<Artikl *>
+/home/valen/2026_Analysis_Expresso/Expresso/src/porudzbina.cpp:115:22: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  115 | QVariant Porudzbina::toVariant() const {
+      | ~~~~~~~~             ^
+      | auto                                   -> QVariant
+116935 warnings generated.
+233870 warnings generated.
+Suppressed 233830 warnings (233830 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[12/16][221.7s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:135:35: warning: statement should be inside braces [readability-braces-around-statements]
+  135 |     if (result == QMessageBox::Ok)
+      |                                   ^
+      |                                    {
+  136 |       messageBox.close();
+      |                          
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:140:13: warning: loop variable is copied but only used as const reference; consider making it a const reference [performance-for-range-copy]
+  140 |   for (auto naziv : (menu->getKategorije()).keys()) {
+      |             ^
+      |        const  &
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:150:37: warning: statement should be inside braces [readability-braces-around-statements]
+  150 |       if (result == QMessageBox::Ok)
+      |                                     ^
+      |                                      {
+  151 |         messageBox.close();
+      |                            
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:174:32: warning: statement should be inside braces [readability-braces-around-statements]
+  174 |   if (naziv == "" || cena <= 0)
+      |                                ^
+      |                                 {
+  175 |     return;
+      |            
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:187:35: warning: statement should be inside braces [readability-braces-around-statements]
+  187 |     if (result == QMessageBox::Ok)
+      |                                   ^
+      |                                    {
+  188 |       messageBox.close();
+      |                          
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:204:35: warning: statement should be inside braces [readability-braces-around-statements]
+  204 |     if (result == QMessageBox::Ok)
+      |                                   ^
+      |                                    {
+  205 |       messageBox.close();
+      |                          
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:243:35: warning: statement should be inside braces [readability-braces-around-statements]
+  243 |     if (result == QMessageBox::Ok)
+      |                                   ^
+      |                                    {
+  244 |       messageBox.close();
+      |                          
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:263:18: warning: method 'on_pbQuitMainMenu_clicked' can be made static [readability-convert-member-functions-to-static]
+  263 | void GlavniMeni::on_pbQuitMainMenu_clicked() { qApp->quit(); }
+      |                  ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:275:36: warning: statement should be inside braces [readability-braces-around-statements]
+  275 |     if (raspored->getNaziv() != "")
+      |                                    ^
+      |                                     {
+  276 |       ui->cbDesign->addItem(raspored->getNaziv());
+      |                                                   
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:322:8: warning: implicit conversion 'Raspored *' -> 'bool' [readability-implicit-bool-conversion]
+  322 |   if (!m_currentRaspored) {
+      |       ~^                
+      |                          == nullptr
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:361:14: warning: the 'empty' method should be used to check for emptiness instead of 'length' [readability-container-size-empty]
+  361 |   } else if (sto_za_brisanje.length() == 0) {
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |              sto_za_brisanje.empty()
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h:754:17: note: method 'QList'::empty() defined here
+  754 |     inline bool empty() const noexcept
+      |                 ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:374:8: warning: 'auto sto' can be declared as 'auto *sto' [readability-qualified-auto]
+  374 |   for (auto sto : m_currentRaspored->getItems()) {
+      |        ^~~~
+      |        auto *
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:399:10: warning: 'auto item' can be declared as 'auto *item' [readability-qualified-auto]
+  399 |     for (auto item : m_currentRaspored->getItems()) {
+      |          ^~~~
+      |          auto *
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:406:3: warning: 'const auto rasporedi' can be declared as 'auto *const rasporedi' [readability-qualified-auto]
+  406 |   const auto rasporedi = m_rasporedData.getRasporedi();
+      |   ^~~~~~~~~~
+      |   auto *const 
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:407:26: warning: narrowing conversion from 'size_type' (aka 'long long') to signed type 'qint32' (aka 'int') is implementation-defined [bugprone-narrowing-conversions]
+  407 |   qint32 brojRasporeda = rasporedi->size();
+      |                          ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:409:10: warning: 'auto item' can be declared as 'auto *item' [readability-qualified-auto]
+  409 |     for (auto item : (rasporedi->values())[0]->getItems()) {
+      |          ^~~~
+      |          auto *
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:428:8: warning: 'auto sto' can be declared as 'auto *sto' [readability-qualified-auto]
+  428 |   for (auto sto : m_currentRaspored->getItems()) {
+      |        ^~~~
+      |        auto *
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:445:8: warning: 'auto sto' can be declared as 'auto *sto' [readability-qualified-auto]
+  445 |   for (auto sto : m_currentRaspored->getItems()) {
+      |        ^~~~
+      |        auto *
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:447:27: warning: statement should be inside braces [readability-braces-around-statements]
+  447 |     if (sto->isSelected())
+      |                           ^
+      |                            {
+  448 |       sto->setSelected(false);
+      |                               
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:509:18: warning: method 'ocistiTablu' can be made static [readability-convert-member-functions-to-static]
+  509 | void GlavniMeni::ocistiTablu(QGraphicsScene *tabla) {
+      |                  ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/glavnimeni.cpp:510:8: warning: 'auto item' can be declared as 'auto *item' [readability-qualified-auto]
+  510 |   for (auto item : tabla->items()) {
+      |        ^~~~
+      |        auto *
+127542 warnings generated.
+255084 warnings generated.
+Suppressed 255042 warnings (255042 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[13/16][145.0s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/tabla.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/tabla.cpp:8:29: warning: parameter name 's' is too short, expected at least 3 characters [readability-identifier-length]
+    8 | void Tabla::postaviSto(Sto *s) { pozicionirajSto(s); }
+      |                             ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tabla.cpp:10:13: warning: method 'pozicionirajSto' can be made static [readability-convert-member-functions-to-static]
+   10 | void Tabla::pozicionirajSto(Sto *s) {
+      |             ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tabla.cpp:10:34: warning: parameter name 's' is too short, expected at least 3 characters [readability-identifier-length]
+   10 | void Tabla::pozicionirajSto(Sto *s) {
+      |                                  ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tabla.cpp:17:14: warning: variable name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+   17 |   const auto x = (250 * (s->getId() - 1)) % sirina;
+      |              ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tabla.cpp:18:14: warning: variable name 'y' is too short, expected at least 3 characters [readability-identifier-length]
+   18 |   const auto y = 240 * ((250 * (s->getId() - 1)) / sirina);
+      |              ^
+108253 warnings generated.
+216506 warnings generated.
+Suppressed 216496 warnings (216496 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[14/16][101.9s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/meni.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/meni.cpp:11:8: warning: 'auto kategorija' can be declared as 'auto *kategorija' [readability-qualified-auto]
+   11 |   for (auto kategorija : kategorije) {
+      |        ^~~~
+      |        auto *
+/home/valen/2026_Analysis_Expresso/Expresso/src/meni.cpp:16:44: warning: parameter name 'cb' is too short, expected at least 3 characters [readability-identifier-length]
+   16 | void Meni::printNamesInComboBox(QComboBox *cb) {
+      |                                            ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/meni.cpp:27:32: warning: the parameter 'naziv' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   27 | void Meni::addCategory(QString naziv) {
+      |                                ^
+      |                        const  &
+/home/valen/2026_Analysis_Expresso/Expresso/src/meni.cpp:33:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   33 | QVariant Meni::toVariant() const {
+      | ~~~~~~~~       ^
+      | auto                             -> QVariant
+/home/valen/2026_Analysis_Expresso/Expresso/src/meni.cpp:87:35: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   87 | QMap<QString, Kategorija *> Meni::getKategorije() { return _kategorije; }
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~~~       ^
+      | auto                                              -> QMap<QString, Kategorija *>
+/home/valen/2026_Analysis_Expresso/Expresso/src/meni.cpp:89:11: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   89 | int Meni::addItem(const QString &naziv, Artikl *artikl) {
+      | ~~~       ^
+      | auto                                                    -> int
+118171 warnings generated.
+236342 warnings generated.
+Suppressed 236330 warnings (236330 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[15/16][103.7s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:17:42: warning: 0x7f is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   17 |   if (sto->getColor() == QColor::fromRgb(0x7f, 0x70, 0x53))
+      |                                          ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:17:48: warning: 0x70 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   17 |   if (sto->getColor() == QColor::fromRgb(0x7f, 0x70, 0x53))
+      |                                                ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:17:54: warning: 0x53 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   17 |   if (sto->getColor() == QColor::fromRgb(0x7f, 0x70, 0x53))
+      |                                                      ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:17:60: warning: statement should be inside braces [readability-braces-around-statements]
+   17 |   if (sto->getColor() == QColor::fromRgb(0x7f, 0x70, 0x53))
+      |                                                            ^
+      |                                                             {
+   18 |     ui->rbBlack->setChecked(true);
+   19 |   else if (sto->getColor() == QColor::fromRgb(128, 128, 128))
+      |   } 
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:19:47: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   19 |   else if (sto->getColor() == QColor::fromRgb(128, 128, 128))
+      |                                               ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:19:52: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   19 |   else if (sto->getColor() == QColor::fromRgb(128, 128, 128))
+      |                                                    ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:19:57: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   19 |   else if (sto->getColor() == QColor::fromRgb(128, 128, 128))
+      |                                                         ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:19:62: warning: statement should be inside braces [readability-braces-around-statements]
+   19 |   else if (sto->getColor() == QColor::fromRgb(128, 128, 128))
+      |                                                              ^
+      |                                                               {
+   20 |     ui->rbGray->setChecked(true);
+   21 |   else if (sto->getColor() == QColor::fromRgb(70, 70, 70))
+      |   } 
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:21:47: warning: 70 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   21 |   else if (sto->getColor() == QColor::fromRgb(70, 70, 70))
+      |                                               ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:21:51: warning: 70 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   21 |   else if (sto->getColor() == QColor::fromRgb(70, 70, 70))
+      |                                                   ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:21:55: warning: 70 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   21 |   else if (sto->getColor() == QColor::fromRgb(70, 70, 70))
+      |                                                       ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:21:59: warning: statement should be inside braces [readability-braces-around-statements]
+   21 |   else if (sto->getColor() == QColor::fromRgb(70, 70, 70))
+      |                                                           ^
+      |                                                            {
+   22 |     ui->rbColor3->setChecked(true);
+   23 |   else
+      |   } 
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:23:7: warning: statement should be inside braces [readability-braces-around-statements]
+   23 |   else
+      |       ^
+      |        {
+   24 |     ui->rbBrown->setChecked(true);
+      |                                   
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:26:41: warning: statement should be inside braces [readability-braces-around-statements]
+   26 |   if (sto->getStatus() == Sto::RESERVED)
+      |                                         ^
+      |                                          {
+   27 |     ui->cbReserved->setChecked(true);
+   28 |   else
+      |   } 
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:28:7: warning: statement should be inside braces [readability-braces-around-statements]
+   28 |   else
+      |       ^
+      |        {
+   29 |     ui->cbAvailable->setChecked(true);
+      |                                       
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:37:7: warning: implicit conversion 'qint32' (aka 'int') -> 'bool' [readability-implicit-bool-conversion]
+   37 |   if (m_sto->xRadius || m_sto->yRadius) {
+      |       ^
+      |       (              != 0)
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:37:25: warning: implicit conversion 'qint32' (aka 'int') -> 'bool' [readability-implicit-bool-conversion]
+   37 |   if (m_sto->xRadius || m_sto->yRadius) {
+      |                         ^             
+      |                         (              != 0)
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:58:19: warning: narrowing conversion from 'qreal' (aka 'double') to 'qint32' (aka 'int') [bugprone-narrowing-conversions]
+   58 |   m_sto->setWidth(m_oldWidth);
+      |                   ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:59:20: warning: narrowing conversion from 'qreal' (aka 'double') to 'qint32' (aka 'int') [bugprone-narrowing-conversions]
+   59 |   m_sto->setHeight(m_oldHeight);
+      |                    ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:65:22: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   65 |     m_sto->xRadius = 10;
+      |                      ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:66:22: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   66 |     m_sto->yRadius = 10;
+      |                      ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:75:54: warning: use a trailing return type for this lambda [modernize-use-trailing-return-type]
+   75 |   connect(ui->pbCancel, &QPushButton::clicked, this, [this]() {
+      |                                                      ^
+      |                                                               -> void
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:79:54: warning: use a trailing return type for this lambda [modernize-use-trailing-return-type]
+   79 |   connect(ui->cbReserved, &QCheckBox::clicked, this, [this]() {
+      |                                                      ^
+      |                                                               -> void
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:82:11: warning: statement should be inside braces [readability-braces-around-statements]
+   82 |     } else
+      |           ^
+      |            {
+   83 |       ui->cbAvailable->setChecked(true);
+      |                                         
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:85:55: warning: use a trailing return type for this lambda [modernize-use-trailing-return-type]
+   85 |   connect(ui->cbAvailable, &QCheckBox::clicked, this, [this]() {
+      |                                                       ^
+      |                                                                -> void
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:86:37: warning: statement should be inside braces [readability-braces-around-statements]
+   86 |     if (ui->cbReserved->isChecked())
+      |                                     ^
+      |                                      {
+   87 |       ui->cbReserved->setChecked(false);
+   88 |     else
+      |     } 
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:88:9: warning: statement should be inside braces [readability-braces-around-statements]
+   88 |     else
+      |         ^
+      |          {
+   89 |       ui->cbReserved->setChecked(true);
+      |                                        
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:92:54: warning: use a trailing return type for this lambda [modernize-use-trailing-return-type]
+   92 |   connect(ui->rbBlack, &QRadioButton::toggled, this, [this]() {
+      |                                                      ^
+      |                                                               -> void
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:93:37: warning: 0x7f is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   93 |     m_sto->setColor(QColor::fromRgb(0x7f, 0x70, 0x53));
+      |                                     ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:93:43: warning: 0x70 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   93 |     m_sto->setColor(QColor::fromRgb(0x7f, 0x70, 0x53));
+      |                                           ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:93:49: warning: 0x53 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   93 |     m_sto->setColor(QColor::fromRgb(0x7f, 0x70, 0x53));
+      |                                                 ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:96:53: warning: use a trailing return type for this lambda [modernize-use-trailing-return-type]
+   96 |   connect(ui->rbGray, &QRadioButton::toggled, this, [this]() {
+      |                                                     ^
+      |                                                              -> void
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:97:37: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   97 |     m_sto->setColor(QColor::fromRgb(128, 128, 128));
+      |                                     ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:97:42: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   97 |     m_sto->setColor(QColor::fromRgb(128, 128, 128));
+      |                                          ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:97:47: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   97 |     m_sto->setColor(QColor::fromRgb(128, 128, 128));
+      |                                               ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:100:55: warning: use a trailing return type for this lambda [modernize-use-trailing-return-type]
+  100 |   connect(ui->rbColor3, &QRadioButton::toggled, this, [this]() {
+      |                                                       ^
+      |                                                                -> void
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:101:37: warning: 70 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  101 |     m_sto->setColor(QColor::fromRgb(70, 70, 70));
+      |                                     ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:101:41: warning: 70 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  101 |     m_sto->setColor(QColor::fromRgb(70, 70, 70));
+      |                                         ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:101:45: warning: 70 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  101 |     m_sto->setColor(QColor::fromRgb(70, 70, 70));
+      |                                             ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:104:54: warning: use a trailing return type for this lambda [modernize-use-trailing-return-type]
+  104 |   connect(ui->rbBrown, &QRadioButton::toggled, this, [this]() {
+      |                                                      ^
+      |                                                               -> void
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:105:37: warning: 120 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  105 |     m_sto->setColor(QColor::fromRgb(120, 64, 20));
+      |                                     ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:105:42: warning: 64 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  105 |     m_sto->setColor(QColor::fromRgb(120, 64, 20));
+      |                                          ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:105:46: warning: 20 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  105 |     m_sto->setColor(QColor::fromRgb(120, 64, 20));
+      |                                              ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:137:21: warning: narrowing conversion from 'qreal' (aka 'double') to 'qint32' (aka 'int') [bugprone-narrowing-conversions]
+  137 |     m_sto->setWidth(newWidth);
+      |                     ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:138:22: warning: narrowing conversion from 'qreal' (aka 'double') to 'qint32' (aka 'int') [bugprone-narrowing-conversions]
+  138 |     m_sto->setHeight(newHeight);
+      |                      ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:141:28: warning: narrowing conversion from 'qreal' (aka 'double') to 'int' [bugprone-narrowing-conversions]
+  141 |     ui->hsbWidth->setValue(newWidth);
+      |                            ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:142:29: warning: narrowing conversion from 'qreal' (aka 'double') to 'int' [bugprone-narrowing-conversions]
+  142 |     ui->hsbHeight->setValue(newHeight);
+      |                             ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:156:22: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  156 |     m_sto->xRadius = 10;
+      |                      ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:157:22: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  157 |     m_sto->yRadius = 10;
+      |                      ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:167:19: warning: 150 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  167 |   m_sto->setWidth(150);
+      |                   ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:168:20: warning: 150 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  168 |   m_sto->setHeight(150);
+      |                    ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:176:35: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  176 |   m_sto->setColor(QColor::fromRgb(128, 128, 128));
+      |                                   ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:176:40: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  176 |   m_sto->setColor(QColor::fromRgb(128, 128, 128));
+      |                                        ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:176:45: warning: 128 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  176 |   m_sto->setColor(QColor::fromRgb(128, 128, 128));
+      |                                             ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:227:21: warning: narrowing conversion from 'qreal' (aka 'double') to 'qint32' (aka 'int') [bugprone-narrowing-conversions]
+  227 |     m_sto->setWidth(newWidth);
+      |                     ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:228:22: warning: narrowing conversion from 'qreal' (aka 'double') to 'qint32' (aka 'int') [bugprone-narrowing-conversions]
+  228 |     m_sto->setHeight(newHeight);
+      |                      ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:231:28: warning: narrowing conversion from 'qreal' (aka 'double') to 'int' [bugprone-narrowing-conversions]
+  231 |     ui->hsbWidth->setValue(newWidth);
+      |                            ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/tableoptions.cpp:232:29: warning: narrowing conversion from 'qreal' (aka 'double') to 'int' [bugprone-narrowing-conversions]
+  232 |     ui->hsbHeight->setValue(newHeight);
+      |                             ^
+118461 warnings generated.
+236922 warnings generated.
+Suppressed 236806 warnings (236806 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
+[16/16][125.8s] clang-tidy-21 -checks=clang-diagnostic-*,clang-analyzer-*,modernize-*,performance-*,readability-*,bugprone-* -p=../build /home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:10:11: warning: use '= default' to define a trivial default constructor [modernize-use-equals-default]
+   10 | izvestaj::izvestaj() {}
+      |           ^          ~~
+      |                      = default;
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:12:16: warning: method 'sacuvajRacun' can be made static [readability-convert-member-functions-to-static]
+   12 | void izvestaj::sacuvajRacun(double ukupno, const QString &opis) {
+      |                ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:15:12: warning: variable name 'i' is too short, expected at least 3 characters [readability-identifier-length]
+   15 |   unsigned i = 1;
+      |            ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:41:19: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   41 | QString izvestaj::ucitajdnevniizvestaj(const QDate &datum) {
+      | ~~~~~~~           ^
+      | auto                                                       -> QString
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:41:19: warning: method 'ucitajdnevniizvestaj' can be made static [readability-convert-member-functions-to-static]
+   41 | QString izvestaj::ucitajdnevniizvestaj(const QDate &datum) {
+      |                   ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:48:17: warning: variable name 'in' is too short, expected at least 3 characters [readability-identifier-length]
+   48 |     QTextStream in(&file);
+      |                 ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:58:19: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   58 | QString izvestaj::ucitajMesecniIzvestaj(const QDate &datum) {
+      | ~~~~~~~           ^
+      | auto                                                        -> QString
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:70:19: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   70 | QString izvestaj::ucitajGodisnjiIzvestaj(const QDate &datum) {
+      | ~~~~~~~           ^
+      | auto                                                         -> QString
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:73:9: warning: Value stored to 'endDate' during its initialization is never read [clang-analyzer-deadcode.DeadStores]
+   73 |   QDate endDate = startDate.addYears(1).addDays(-1);
+      |         ^~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:73:9: note: Value stored to 'endDate' during its initialization is never read
+   73 |   QDate endDate = startDate.addYears(1).addDays(-1);
+      |         ^~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:73:9: warning: unused variable 'endDate' [clang-diagnostic-unused-variable]
+   73 |   QDate endDate = startDate.addYears(1).addDays(-1);
+      |         ^~~~~~~
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:75:32: warning: 12 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   75 |   for (int month = 1; month <= 12; ++month) {
+      |                                ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:83:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   83 | double izvestaj::izracunajProsecnuDnevnuZaradu(const QDate &datum) {
+      | ~~~~~~           ^
+      | auto                                                               -> double
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:91:17: warning: variable name 'in' is too short, expected at least 3 characters [readability-identifier-length]
+   91 |     QTextStream in(&dnevniIzvestaj);
+      |                 ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:105:17: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  105 | QDate izvestaj::najprometnijiDanMesec(const QDate &datum) {
+      | ~~~~~           ^
+      | auto                                                      -> QDate
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:114:17: warning: variable name 'in' is too short, expected at least 3 characters [readability-identifier-length]
+  114 |     QTextStream in(&dnevniIzvestaj);
+      |                 ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:132:17: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  132 | QDate izvestaj::najmanjePrometanDanMesec(const QDate &datum) {
+      | ~~~~~           ^
+      | auto                                                         -> QDate
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:141:17: warning: variable name 'in' is too short, expected at least 3 characters [readability-identifier-length]
+  141 |     QTextStream in(&dnevniIzvestaj);
+      |                 ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:159:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  159 | double izvestaj::ukupniPrihodMesec(const QDate &datum) {
+      | ~~~~~~           ^
+      | auto                                                   -> double
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:166:17: warning: variable name 'in' is too short, expected at least 3 characters [readability-identifier-length]
+  166 |     QTextStream in(&dnevniIzvestaj);
+      |                 ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:179:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  179 | double izvestaj::ukupniPrihodGodina(const QDate &datum) {
+      | ~~~~~~           ^
+      | auto                                                    -> double
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:182:32: warning: 12 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  182 |   for (int month = 1; month <= 12; ++month) {
+      |                                ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:189:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  189 | double izvestaj::dnevniPrihod(const QDate &datum) {
+      | ~~~~~~           ^
+      | auto                                              -> double
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:192:15: warning: variable name 'in' is too short, expected at least 3 characters [readability-identifier-length]
+  192 |   QTextStream in(&dnevniIzvestaj);
+      |               ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:204:16: warning: method 'unesiTrosakNabavke' can be made static [readability-convert-member-functions-to-static]
+  204 | void izvestaj::unesiTrosakNabavke() {
+      |                ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:205:8: warning: variable name 'ok' is too short, expected at least 3 characters [readability-identifier-length]
+  205 |   bool ok;
+      |        ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:208:65: warning: 1000000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  208 |                               "Unesite trošak nabavke:", 0, 0, 1000000, 2, &ok);
+      |                                                                ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:249:17: warning: variable name 'in' is too short, expected at least 3 characters [readability-identifier-length]
+  249 |     QTextStream in(&file);
+      |                 ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:261:8: warning: variable name 'ok' is too short, expected at least 3 characters [readability-identifier-length]
+  261 |   bool ok;
+      |        ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:263:63: warning: 100 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  263 |       nullptr, "Broj radnika", "Unesite broj radnika:", 0, 0, 100, 1, &ok);
+      |                                                               ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:273:63: warning: 1000000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  273 |         QString("Unesite platu za radnika %1:").arg(i), 0, 0, 1000000, 2, &ok);
+      |                                                               ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:285:51: warning: 20.0 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  285 |       nullptr, "PDV", "Unesite stopu PDV-a (%):", 20.0, 0, 100, 2, &ok);
+      |                                                   ^
+/home/valen/2026_Analysis_Expresso/Expresso/src/izvestaj.cpp:285:60: warning: 100 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  285 |       nullptr, "PDV", "Unesite stopu PDV-a (%):", 20.0, 0, 100, 2, &ok);
+      |                                                            ^
+122375 warnings generated.
+244750 warnings generated.
+Suppressed 244686 warnings (244686 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+
