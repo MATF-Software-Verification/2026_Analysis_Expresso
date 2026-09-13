@@ -1,0 +1,325 @@
+=== fuzz_fromvariant, session 1 ===
+=== First 15 lines (start of fuzzing session) ===
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 2929832628
+INFO: Loaded 1 modules   (892 inline 8-bit counters): 892 [0x5dae4784f068, 0x5dae4784f3e4),
+INFO: Loaded 1 PC tables (892 PCs): 892 [0x5dae4784f3e8,0x5dae47852ba8),
+INFO:        0 files found in fuzzing/corpus
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: A corpus is not provided, starting from an empty corpus
+#2	INITED cov: 4 ft: 4 corp: 1/1b exec/s: 0 rss: 46Mb
+Trying to construct an instance of an invalid type, type id: 705301029
+Trying to construct an instance of an invalid type, type id: 705301029
+Trying to construct an instance of an invalid type, type id: 705301025
+Trying to construct an instance of an invalid type, type id: -218497025
+Trying to construct an instance of an invalid type, type id: -218497243
+Trying to construct an instance of an invalid type, type id: 168430090
+Trying to construct an instance of an invalid type, type id: 168430090
+
+=== [... truncated - thousands of 'Trying to construct an instance of an invalid
+     type' lines, expected since the fuzzer generates random type-id values;
+     the full session had 55829 lines ...] ===
+
+=== Last 40 lines (crash report) ===
+Trying to construct an instance of an invalid type, type id: -1326024066
+Trying to construct an instance of an invalid type, type id: 1454438010
+Trying to construct an instance of an invalid type, type id: 1454407294
+Trying to construct an instance of an invalid type, type id: 945205374
+Trying to construct an instance of an invalid type, type id: -370546199
+Trying to construct an instance of an invalid type, type id: -370546199
+Trying to construct an instance of an invalid type, type id: -370546199
+Trying to construct an instance of an invalid type, type id: -370546199
+Trying to construct an instance of an invalid type, type id: -370546199
+Trying to construct an instance of an invalid type, type id: 2062974590
+Trying to construct an instance of an invalid type, type id: 2062974590
+Trying to construct an instance of an invalid type, type id: 2055110270
+=================================================================
+==93750==ERROR: AddressSanitizer: out of memory: allocator is trying to allocate 0x1ed32fcfd0 bytes
+    #0 0x5dae477b2618 in malloc (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_fromvariant+0x114618) (BuildId: 7e4b6402d4ece904a40ccf359b257d502f1f5f0a)
+    #1 0x79db8a69c17b in QArrayData::allocate(QArrayData**, long long, long long, long long, QArrayData::AllocationOption) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x29c17b) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #2 0x79db8a5c43b3  (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1c43b3) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #3 0x79db8a5ccd1a  (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1ccd1a) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #4 0x79db8a5c0cf6 in QMetaType::load(QDataStream&, void*) const (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1c0cf6) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #5 0x79db8a5fe420 in QVariant::load(QDataStream&) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1fe420) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #6 0x79db8a5fe60a in operator>>(QDataStream&, QVariant&) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1fe60a) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #7 0x5dae477f7e40 in LLVMFuzzerTestOneInput /home/valen/2026_Analysis_Expresso/fuzzing/fuzz_fromvariant.cpp:26:10
+    #8 0x5dae476f3aff in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_fromvariant+0x55aff) (BuildId: 7e4b6402d4ece904a40ccf359b257d502f1f5f0a)
+    #9 0x5dae476f3129 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool, bool*) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_fromvariant+0x55129) (BuildId: 7e4b6402d4ece904a40ccf359b257d502f1f5f0a)
+    #10 0x5dae476f4b89 in fuzzer::Fuzzer::MutateAndTestOne() (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_fromvariant+0x56b89) (BuildId: 7e4b6402d4ece904a40ccf359b257d502f1f5f0a)
+    #11 0x5dae476f56c5 in fuzzer::Fuzzer::Loop(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_fromvariant+0x576c5) (BuildId: 7e4b6402d4ece904a40ccf359b257d502f1f5f0a)
+    #12 0x5dae476e2430 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_fromvariant+0x44430) (BuildId: 7e4b6402d4ece904a40ccf359b257d502f1f5f0a)
+    #13 0x5dae4770d136 in main (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_fromvariant+0x6f136) (BuildId: 7e4b6402d4ece904a40ccf359b257d502f1f5f0a)
+    #14 0x79db8a02a600 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:59:16
+    #15 0x79db8a02a717 in __libc_start_main csu/../csu/libc-start.c:360:3
+    #16 0x5dae476d6c34 in _start (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_fromvariant+0x38c34) (BuildId: 7e4b6402d4ece904a40ccf359b257d502f1f5f0a)
+
+==93750==HINT: if you don't care about these errors you may set allocator_may_return_null=1
+SUMMARY: AddressSanitizer: out-of-memory (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_fromvariant+0x114618) (BuildId: 7e4b6402d4ece904a40ccf359b257d502f1f5f0a) in malloc
+==93750==ABORTING
+MS: 4 CrossOver-InsertByte-EraseBytes-ChangeBinInt-; base unit: a2a147890683c8630f8afb99ba906ba7f95d9988
+0x0,0x0,0x0,0x9,0x7a,0xf6,0x99,0x7e,0x7e,
+\000\000\000\011z\366\231~~
+artifact_prefix='fuzzing/'; Test unit written to fuzzing/crash-b81f4a2522cb4d15eac9024e3b598123243e4db5
+Base64: AAAACXr2mX5+
+
+Note: 0x1ed32fcfd0 bytes is approximately 123.3 GB (using 1024-based GiB),
+requested from a 9-byte input - the ASan allocator refuses the allocation
+and aborts the process (AddressSanitizer: out-of-memory).
+
+=== fuzz_fromvariant, session 2 (-ignore_crashes=1) ===
+This session found an additional ASan allocator OOM - the same failure
+type as session 1 ("AddressSanitizer: out of memory: allocator is trying
+to allocate 0x4bb1b1b20 bytes"), with an identical stack:
+QArrayData::allocate -> QMetaType::load -> QVariant::load ->
+operator>>(QDataStream&, QVariant&). The artifact
+crash-eb4d30ff9a4545bfb749a189f00e2766aa2833ef was confirmed to be a
+duplicate of crash-b81f4a2522cb4d15eac9024e3b598123243e4db5 (same code
+path, only different input bytes and a different requested allocation
+size) and was removed.
+
+=== fuzz_fromvariant, oom-f612 (libFuzzer malloc-limit OOM) ===
+Command:
+  QT_QPA_PLATFORM=offscreen ../build-fuzz/fuzz_fromvariant oom-f612b9574d0ecaa4feb76526b61315963fa55ec2
+
+Same root cause as sessions 1/2 above - an uncontrolled size read during
+QVariant deserialization - but a different observed failure mode: in
+sessions 1/2, ASan's own allocator refused the allocation
+("AddressSanitizer: out of memory"); here, libFuzzer's malloc-limit hook
+(-rss_limit_mb) intercepts the call and aborts first, detected by
+libFuzzer rather than ASan ("libFuzzer: out-of-memory").
+
+==435601== ERROR: libFuzzer: out-of-memory (malloc(4850786608))
+   To change the out-of-memory limit use -rss_limit_mb=<N>
+    #7 0x5ff2746cf688 in malloc (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_fromvariant+0x114688)
+    #8 0x78497bc9c17b in QArrayData::allocate(QArrayData**, long long, long long, long long, QArrayData::AllocationOption) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x29c17b)
+    #11 0x78497bbc0cf6 in QMetaType::load(QDataStream&, void*) const (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1c0cf6)
+    #12 0x78497bbfe420 in QVariant::load(QDataStream&) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1fe420)
+    #13 0x78497bbfe60a in operator>>(QDataStream&, QVariant&) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1fe60a)
+    #14 0x5ff274714ef6 in LLVMFuzzerTestOneInput /home/valen/2026_Analysis_Expresso/fuzzing/fuzz_fromvariant.cpp:34:10
+SUMMARY: libFuzzer: out-of-memory
+
+Note: oom-8675ef00bbf65b23ed8c8d9968223d0ad8db1b01 was confirmed to be a
+duplicate of this same detection mechanism and was removed.
+
+=== fuzz_fromvariant, session 3 (SEGV, replaying the saved crash file) ===
+Command:
+  QT_QPA_PLATFORM=offscreen ../build-fuzz/fuzz_fromvariant crash-7b10d4027dd07b7c2b127dcb0561f1fb3b4bc715
+
+Input is only 6 bytes: 00 00 10 0a 00 00
+
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==431216==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x73cfa4e7316f bp 0x7ffd40b04190 sp 0x7ffd40b04160 T0)
+==431216==The signal is caused by a WRITE memory access.
+==431216==Hint: address points to the zero page.
+    #0 0x73cfa4e7316f in QBrush::init(QColor const&, Qt::BrushStyle) (/usr/lib/x86_64-linux-gnu/libQt6Gui.so.6+0x27316f)
+    #1 0x73cfa4e7f1e6 in operator>>(QDataStream&, QBrush&) (/usr/lib/x86_64-linux-gnu/libQt6Gui.so.6+0x27f1e6)
+    #2 0x73cfa47c0cf6 in QMetaType::load(QDataStream&, void*) const (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1c0cf6)
+    #3 0x73cfa47fe420 in QVariant::load(QDataStream&) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1fe420)
+    #4 0x73cfa47fe60a in operator>>(QDataStream&, QVariant&) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1fe60a)
+    #5 0x5c691eb64ef6 in LLVMFuzzerTestOneInput /home/valen/2026_Analysis_Expresso/fuzzing/fuzz_fromvariant.cpp:34:10
+SUMMARY: AddressSanitizer: SEGV (/usr/lib/x86_64-linux-gnu/libQt6Gui.so.6+0x27316f) in QBrush::init(QColor const&, Qt::BrushStyle)
+==431216==ABORTING
+
+Note: this is a genuine null-pointer write (SEGV), not an OOM like the
+previous sessions ("The signal is caused by a WRITE memory access" /
+"address points to the zero page"). The crash happens inside Qt's own
+QVariant::load() implementation, before Artikl::fromVariant() or
+Kategorija::fromVariant() are ever reached. The file
+crash-7b10d4027dd07b7c2b127dcb0561f1fb3b4bc715 is kept as evidence.
+
+Checked and rejected as non-reproducible on the current build:
+crash-772d72b1f98af92744a2b37b22222f6b1399c9b6 and
+crash-d4858da8bdb2d658a08e8d3bff2c6c02cde0f222. After QGuiApplication was
+added to LLVMFuzzerInitialize, these crashes no longer reproduce -
+replaying both files against the current binary produces no error and no
+output at all.
+
+=== fuzz_load, session 1 (seed file, leak) ===
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 2218177998
+INFO: Loaded 1 modules   (5372 inline 8-bit counters): 5372 [0x56ff2647cab8, 0x56ff2647dfb4),
+INFO: Loaded 1 PC tables (5372 PCs): 5372 [0x56ff2647dfb8,0x56ff26492f78),
+INFO:        1 files found in fuzzing/corpus_load
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 1 min: 808b max: 808b total: 808b rss: 48Mb
+
+=================================================================
+==141010==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 96 byte(s) in 4 object(s) allocated from:
+    #0 0x56ff263cf351 in operator new(unsigned long) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x17f351) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #1 0x56ff263fbf19 in Sto::fromVariant(QVariant const&) /home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:151:14
+    #2 0x56ff263f329a in Raspored::fromVariant(QVariant const&) /home/valen/2026_Analysis_Expresso/Expresso/src/raspored.cpp:44:10
+    #3 0x56ff263fdde8 in BinarySerializer::load(Serializable&, QString const&) const /home/valen/2026_Analysis_Expresso/Expresso/src/binaryserializer.cpp:51:16
+    #4 0x56ff263d1ac7 in LLVMFuzzerTestOneInput /home/valen/2026_Analysis_Expresso/fuzzing/fuzz_load.cpp:50:14
+    #5 0x56ff262cc62f in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7c62f) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #6 0x56ff262cbc59 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool, bool*) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7bc59) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #7 0x56ff262cda72 in fuzzer::Fuzzer::ReadAndExecuteSeedCorpora(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7da72) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #8 0x56ff262cdf8b in fuzzer::Fuzzer::Loop(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7df8b) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #9 0x56ff262baf60 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x6af60) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #10 0x56ff262e5c66 in main (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x95c66) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #11 0x76f90002a600 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:59:16
+    #12 0x76f90002a717 in __libc_start_main csu/../csu/libc-start.c:360:3
+    #13 0x56ff262af764 in _start (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x5f764) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+
+Indirect leak of 144 byte(s) in 4 object(s) allocated from:
+    #0 0x56ff2638b148 in malloc (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x13b148) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #1 0x76f90069c2af in QArrayData::allocate2(QArrayData**, long long, QArrayData::AllocationOption) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x29c2af) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #2 0x76f90065dea2 in QString::QString(long long, Qt::Initialization) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x25dea2) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #3 0x76f90066937e in QString::fromUtf8(QByteArrayView) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x26937e) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #4 0x56ff263df1b5 in QString::QString(char const*) /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h:939:19
+    #5 0x56ff263df1b5 in Meni::Meni() /home/valen/2026_Analysis_Expresso/Expresso/src/meni.cpp:3:57
+    #6 0x56ff263fbf24 in Sto::fromVariant(QVariant const&) /home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:151:18
+    #7 0x56ff263f329a in Raspored::fromVariant(QVariant const&) /home/valen/2026_Analysis_Expresso/Expresso/src/raspored.cpp:44:10
+    #8 0x56ff263fdde8 in BinarySerializer::load(Serializable&, QString const&) const /home/valen/2026_Analysis_Expresso/Expresso/src/binaryserializer.cpp:51:16
+    #9 0x56ff263d1ac7 in LLVMFuzzerTestOneInput /home/valen/2026_Analysis_Expresso/fuzzing/fuzz_load.cpp:50:14
+    #10 0x56ff262cc62f in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7c62f) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #11 0x56ff262cbc59 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool, bool*) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7bc59) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #12 0x56ff262cda72 in fuzzer::Fuzzer::ReadAndExecuteSeedCorpora(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7da72) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #13 0x56ff262cdf8b in fuzzer::Fuzzer::Loop(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7df8b) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #14 0x56ff262baf60 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x6af60) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #15 0x56ff262e5c66 in main (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x95c66) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #16 0x76f90002a600 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:59:16
+    #17 0x76f90002a717 in __libc_start_main csu/../csu/libc-start.c:360:3
+    #18 0x56ff262af764 in _start (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x5f764) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+
+Indirect leak of 128 byte(s) in 4 object(s) allocated from:
+    #0 0x56ff263cf351 in operator new(unsigned long) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x17f351) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #1 0x56ff263df172 in Meni::Meni() /home/valen/2026_Analysis_Expresso/Expresso/src/meni.cpp:3:36
+    #2 0x56ff263fbf24 in Sto::fromVariant(QVariant const&) /home/valen/2026_Analysis_Expresso/Expresso/src/sto.cpp:151:18
+    #3 0x56ff263f329a in Raspored::fromVariant(QVariant const&) /home/valen/2026_Analysis_Expresso/Expresso/src/raspored.cpp:44:10
+    #4 0x56ff263fdde8 in BinarySerializer::load(Serializable&, QString const&) const /home/valen/2026_Analysis_Expresso/Expresso/src/binaryserializer.cpp:51:16
+    #5 0x56ff263d1ac7 in LLVMFuzzerTestOneInput /home/valen/2026_Analysis_Expresso/fuzzing/fuzz_load.cpp:50:14
+    #6 0x56ff262cc62f in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7c62f) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #7 0x56ff262cbc59 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool, bool*) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7bc59) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #8 0x56ff262cda72 in fuzzer::Fuzzer::ReadAndExecuteSeedCorpora(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7da72) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #9 0x56ff262cdf8b in fuzzer::Fuzzer::Loop(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7df8b) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #10 0x56ff262baf60 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x6af60) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #11 0x56ff262e5c66 in main (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x95c66) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #12 0x76f90002a600 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:59:16
+    #13 0x76f90002a717 in __libc_start_main csu/../csu/libc-start.c:360:3
+    #14 0x56ff262af764 in _start (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x5f764) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+
+SUMMARY: AddressSanitizer: 368 byte(s) leaked in 12 allocation(s).
+
+INFO: a leak has been found in the initial corpus.
+
+INFO: to ignore leaks on libFuzzer side use -detect_leaks=0.
+
+MS: 0 ; base unit: 0000000000000000000000000000000000000000
+artifact_prefix='fuzzing/'; Test unit written to fuzzing/leak-a2ab2d77a2638bceacda7f41444a5757b9526110
+
+Note: this leak was found by running the (unmutated) seed file - a real,
+previously saved arrangement - straight through BinarySerializer::load().
+The full stack pins it to Sto::fromVariant() (sto.cpp:151), an independent
+confirmation of the same leak documented in the Valgrind chapter
+(Sto::m_meni, section 3.2).
+
+=== fuzz_load, session 2 (-detect_leaks=0, crash) ===
+=== First 8 lines (start, seed corpus loaded) ===
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3371342822
+INFO: Loaded 1 modules   (5372 inline 8-bit counters): 5372 [0x5ba9b19a7ab8, 0x5ba9b19a8fb4),
+INFO: Loaded 1 PC tables (5372 PCs): 5372 [0x5ba9b19a8fb8,0x5ba9b19bdf78),
+INFO:        2 files found in fuzzing/corpus_load
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 2 min: 808b max: 808b total: 1616b rss: 47Mb
+#5	INITED cov: 139 ft: 140 corp: 1/808b exec/s: 0 rss: 49Mb
+
+=== [... truncated - repeated 'Trying to construct an instance of an invalid
+     type' lines (Qt safely rejects nonsensical type-id values); the full
+     session had 189 lines ...] ===
+
+=== Last 55 lines (crash report) ===
+Trying to construct an instance of an invalid type, type id: 67135744
+Trying to construct an instance of an invalid type, type id: 131072
+Trying to construct an instance of an invalid type, type id: 655360
+Trying to construct an instance of an invalid type, type id: 167800320
+Trying to construct an instance of an invalid type, type id: 7995497
+Trying to construct an instance of an invalid type, type id: 1979711488
+Trying to construct an instance of an invalid type, type id: 7602277
+Trying to construct an instance of an invalid type, type id: 1929409536
+Trying to construct an instance of an invalid type, type id: 7733345
+Trying to construct an instance of an invalid type, type id: 1811965696
+Trying to construct an instance of an invalid type, type id: 6881380
+Trying to construct an instance of an invalid type, type id: 655360
+Trying to construct an instance of an invalid type, type id: 167800320
+Trying to construct an instance of an invalid type, type id: 7995497
+Trying to construct an instance of an invalid type, type id: 1979711488
+Trying to construct an instance of an invalid type, type id: 7602277
+Trying to construct an instance of an invalid type, type id: 1929409536
+Trying to construct an instance of an invalid type, type id: 7733345
+Trying to construct an instance of an invalid type, type id: 1811965696
+Trying to construct an instance of an invalid type, type id: 6881380
+=================================================================
+==141673==ERROR: AddressSanitizer: out of memory: allocator is trying to allocate 0x960000010 bytes
+    #0 0x5ba9b18b6148 in malloc (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x13b148) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #1 0x76bf12c9c17b in QArrayData::allocate(QArrayData**, long long, long long, long long, QArrayData::AllocationOption) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x29c17b) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #2 0x76bf13184fac  (/usr/lib/x86_64-linux-gnu/libQt6Gui.so.6+0x184fac) (BuildId: fa340efa7a311e2049c6eccb858e6255a2fafbfc)
+    #3 0x76bf1342120a  (/usr/lib/x86_64-linux-gnu/libQt6Gui.so.6+0x42120a) (BuildId: fa340efa7a311e2049c6eccb858e6255a2fafbfc)
+    #4 0x76bf13423379 in operator>>(QDataStream&, QFont&) (/usr/lib/x86_64-linux-gnu/libQt6Gui.so.6+0x423379) (BuildId: fa340efa7a311e2049c6eccb858e6255a2fafbfc)
+    #5 0x76bf12bc0cf6 in QMetaType::load(QDataStream&, void*) const (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1c0cf6) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #6 0x76bf12bfe420 in QVariant::load(QDataStream&) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1fe420) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #7 0x76bf12bfe60a in operator>>(QDataStream&, QVariant&) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1fe60a) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #8 0x76bf12bccc8d  (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1ccc8d) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #9 0x76bf12bc0cf6 in QMetaType::load(QDataStream&, void*) const (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1c0cf6) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #10 0x76bf12bfe420 in QVariant::load(QDataStream&) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1fe420) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #11 0x76bf12bfe60a in operator>>(QDataStream&, QVariant&) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1fe60a) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #12 0x76bf12bcc956  (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1cc956) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #13 0x76bf12bc0cf6 in QMetaType::load(QDataStream&, void*) const (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1c0cf6) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #14 0x76bf12bfe420 in QVariant::load(QDataStream&) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1fe420) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #15 0x76bf12bfe60a in operator>>(QDataStream&, QVariant&) (/usr/lib/x86_64-linux-gnu/libQt6Core.so.6+0x1fe60a) (BuildId: 965bf46c1adbad5630257b8ac46ad7d7875b7ea6)
+    #16 0x5ba9b1928d95 in BinarySerializer::load(Serializable&, QString const&) const /home/valen/2026_Analysis_Expresso/Expresso/src/binaryserializer.cpp:50:14
+    #17 0x5ba9b18fcac7 in LLVMFuzzerTestOneInput /home/valen/2026_Analysis_Expresso/fuzzing/fuzz_load.cpp:50:14
+    #18 0x5ba9b17f762f in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7c62f) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #19 0x5ba9b17f6c59 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool, bool*) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7bc59) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #20 0x5ba9b17f86b9 in fuzzer::Fuzzer::MutateAndTestOne() (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7d6b9) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #21 0x5ba9b17f91f5 in fuzzer::Fuzzer::Loop(std::vector<fuzzer::SizedFile, std::allocator<fuzzer::SizedFile>>&) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x7e1f5) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #22 0x5ba9b17e5f60 in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x6af60) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #23 0x5ba9b1810c66 in main (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x95c66) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+    #24 0x76bf1262a600 in __libc_start_call_main csu/../sysdeps/nptl/libc_start_call_main.h:59:16
+    #25 0x76bf1262a717 in __libc_start_main csu/../csu/libc-start.c:360:3
+    #26 0x5ba9b17da764 in _start (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x5f764) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d)
+
+==141673==HINT: if you don't care about these errors you may set allocator_may_return_null=1
+SUMMARY: AddressSanitizer: out-of-memory (/home/valen/2026_Analysis_Expresso/build-fuzz/fuzz_load+0x13b148) (BuildId: 17b00945007e24618cfd01ba9b20776804b48c8d) in malloc
+==141673==ABORTING
+MS: 3 CrossOver-ChangeBinInt-ChangeByte-; base unit: fad2489fa774669e7cd5050569a28b866b8d8d99
+artifact_prefix='fuzzing/'; Test unit written to fuzzing/crash-e976a7a5153c520f609bd1191c5c8b4f65175edf
+
+Note: this OOM goes through operator>>(QDataStream&, QFont&) - a
+different Qt type/code path than the QVariantList-driven OOM in
+crash-b81f/oom-f612 above - reached by mutating the real seeded .bin file
+rather than the small harness's raw random bytes. It confirms the same
+underlying vulnerability (unchecked size read in QVariant deserialization)
+is triggerable through more than one Qt type.
+
+=== Final findings ===
+
+The fuzzing sessions produced 9 crash/oom/leak artifacts in total. Each one
+was checked individually - by replaying it against the current build -
+before deciding whether to keep it.
+
+Kept artifacts (5):
+- crash-7b10d4027dd07b7c2b127dcb0561f1fb3b4bc715
+  SEGV / null-pointer write in QBrush::init(), 6 bytes
+- crash-b81f4a2522cb4d15eac9024e3b598123243e4db5
+  ASan allocator OOM through QArrayData::allocate (~123 GB), 9 bytes
+- oom-f612b9574d0ecaa4feb76526b61315963fa55ec2
+  libFuzzer malloc-limit OOM - same root cause as above, detected by
+  libFuzzer rather than ASan, 97 bytes
+- crash-e976a7a5153c520f609bd1191c5c8b4f65175edf (fuzz_load)
+  ASan allocator OOM through QFont deserialization, 808 bytes
+- leak-a2ab2d77a2638bceacda7f41444a5757b9526110 (fuzz_load)
+  LeakSanitizer, 368 bytes / 12 allocations, Sto::fromVariant() (sto.cpp:151)
+
+Rejected artifacts (4):
+- crash-eb4d30ff9a4545bfb749a189f00e2766aa2833ef
+  duplicate of crash-b81f... (same ASan allocator-OOM path)
+- oom-8675ef00bbf65b23ed8c8d9968223d0ad8db1b01
+  duplicate of oom-f612... (same libFuzzer malloc-limit OOM path)
+- crash-772d72b1f98af92744a2b37b22222f6b1399c9b6
+  does not reproduce on the current build
+- crash-d4858da8bdb2d658a08e8d3bff2c6c02cde0f222
+  does not reproduce on the current build
