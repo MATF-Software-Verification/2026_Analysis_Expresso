@@ -1,0 +1,30 @@
+                            |Lines       |Functions  |Branches    
+Filename                    |Rate     Num|Rate    Num|Rate     Num
+==================================================================
+[/home/valen/2026_Analysis_Expresso/Expresso/src/]
+artikl.cpp                  |84.8%     33|78.6%    14|55.8%     52
+artikl.h                    | 100%      1| 100%     1|    -      0
+binaryserializer.cpp        |87.1%     31| 100%     3|48.7%     78
+glavnimeni.cpp              |26.6%    380|25.9%    27| 9.8%    734
+help.cpp                    | 0.0%      4| 0.0%     3| 0.0%      8
+izvestaj.cpp                |49.8%    213|61.5%    13|27.4%    486
+kategorija.cpp              |66.7%     60|77.8%     9|35.3%    116
+kategorija.h                | 100%      1| 100%     1|    -      0
+meni.cpp                    |87.5%     48|83.3%    12|43.1%    102
+naruci.cpp                  |44.1%    136|54.5%    11|16.3%    246
+naruci.h                    | 0.0%      1| 0.0%     1|    -      0
+porudzbina.cpp              |47.9%     94|66.7%    15|25.6%    176
+raspored.cpp                |85.7%     56|91.7%    12|39.4%    104
+raspored.h                  | 100%      2| 100%     2|    -      0
+rasporeddata.cpp            |63.3%     49|66.7%     9|29.6%    108
+rasporeddata.h              | 100%      1| 100%     1|    -      0
+serializable.h              | 100%      1|50.0%     2|    -      0
+serializer.h                | 100%      1|50.0%     2|    -      0
+sto.cpp                     |38.3%    120|78.6%    28|14.5%    228
+tabla.cpp                   | 100%     10| 100%     3|    -      0
+tableoptions.cpp            | 0.0%    190| 0.0%    19| 0.0%    242
+unesiartikle.cpp            |21.7%     92|33.3%    12| 7.1%    212
+==================================================================
+                      Total:|40.1%   1524|57.5%   200|19.5%   2892
+Message summary:
+  no messages were reported

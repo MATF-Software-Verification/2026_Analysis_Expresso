@@ -1,0 +1,187 @@
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbHelpMainMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbAddCategoryEMMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbRemoveCategoryEMMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbAddItemEMMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbRemoveItemEMMenu_clicked()
+directory doesn't exist
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbHelpMainMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbAddCategoryEMMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbRemoveCategoryEMMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbAddItemEMMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbRemoveItemEMMenu_clicked()
+directory doesn't exist
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbHelpMainMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbAddCategoryEMMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbRemoveCategoryEMMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbAddItemEMMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbRemoveItemEMMenu_clicked()
+directory doesn't exist
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbHelpMainMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbAddCategoryEMMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbRemoveCategoryEMMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbAddItemEMMenu_clicked()
+qt.core.qmetaobject.connectslotsbyname: QMetaObject::connectSlotsByName: No matching signal for on_pbRemoveItemEMMenu_clicked()
+directory doesn't exist
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests is a Catch v2.13.7 host application.
+Run with -? for options
+
+-------------------------------------------------------------------------------
+Testing UnesiArtikle
+  Testing citanje iz txt
+-------------------------------------------------------------------------------
+/home/valen/2026_Analysis_Expresso/Expresso/tests/unesiartikle_test.cpp:12
+...............................................................................
+
+/home/valen/2026_Analysis_Expresso/Expresso/tests/unesiartikle_test.cpp:15: FAILED:
+  REQUIRE( ua->getSkladisteArtikala().size() > 0 )
+with expansion:
+  0 > 0
+
+-------------------------------------------------------------------------------
+Testing UnesiArtikle
+  Test azuriranja postojećeg artikla
+-------------------------------------------------------------------------------
+/home/valen/2026_Analysis_Expresso/Expresso/tests/unesiartikle_test.cpp:17
+...............................................................................
+
+/home/valen/2026_Analysis_Expresso/Expresso/tests/unesiartikle_test.cpp:27: FAILED:
+  REQUIRE( ua->getSkladisteArtikala().size() == 1 )
+with expansion:
+  2 == 1
+
+Greska prilikom ucitavanja dnevnog izvestaja
+-------------------------------------------------------------------------------
+Izvestaj - cuvanje i ucitavanje dnevnog izvestaja
+  dnevniPrihod tacno sabira iznose svih sacuvanih racuna
+-------------------------------------------------------------------------------
+/home/valen/2026_Analysis_Expresso/Expresso/tests/izvestaj_test.cpp:41
+...............................................................................
+
+/home/valen/2026_Analysis_Expresso/Expresso/tests/izvestaj_test.cpp:46: FAILED:
+  REQUIRE( prihod == Approx(400.0) )
+with expansion:
+  0.0 == Approx( 400.0 )
+
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+Greska prilikom ucitavanja dnevnog izvestaja
+error while opening a file: nepostojeci.bin
+===============================================================================
+test cases: 14 | 12 passed | 2 failed
+assertions: 90 | 87 passed | 3 failed
+

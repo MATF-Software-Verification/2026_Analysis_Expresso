@@ -1,18 +1,19 @@
+Submodule Expresso contains modified content
 diff --git a/Expresso/CMakeLists.txt b/Expresso/CMakeLists.txt
-index 69622ee..d3b0b68 100644
+index 69622ee..5f3a748 100644
 --- a/Expresso/CMakeLists.txt
 +++ b/Expresso/CMakeLists.txt
-@@ -8,8 +8,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+@@ -8,9 +8,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
  
  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -Wextra")
  
 -set(CMAKE_PREFIX_PATH "/home/jelena/Qt/6.6.3/gcc_64/lib/cmake")
 -set(Qt6_DIR "/home/jelena/Qt/6.6.3/gcc_64/lib/cmake")
-+# Removed machine specific Qt paths so the project can use the local Qt6 installation
- 
+-
  set(CMAKE_INCLUDE_CURRENT_DIR ON)
  
-@@ -21,11 +20,6 @@ set(CMAKE_AUTORCC ON)
+ set(CMAKE_ATOUIC ON)
+@@ -21,11 +18,6 @@ set(CMAKE_AUTORCC ON)
  find_package(Qt6 COMPONENTS Core Gui Widgets REQUIRED)
  
  
@@ -24,7 +25,24 @@ index 69622ee..d3b0b68 100644
  set(SOURCES
  	src/artikl.cpp
  	src/binaryserializer.cpp
-@@ -87,7 +81,7 @@ install(TARGETS ${PROJECT_NAME} DESTINATION /opt/${PROJECT_NAME}/bin)
+@@ -33,7 +25,6 @@ set(SOURCES
+ 	src/help.cpp
+ 	src/izvestaj.cpp
+ 	src/kategorija.cpp
+-	src/main.cpp
+ 	src/meni.cpp
+ 	src/naruci.cpp
+ 	src/porudzbina.cpp
+@@ -75,7 +66,7 @@ set(FORMS
+ 
+ qt6_wrap_ui(UI_HEADERS ${FORMS})
+ 
+-add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${FORMS})
++add_executable(${PROJECT_NAME} ${SOURCES} src/main.cpp ${HEADERS} ${FORMS})
+ 
+ target_link_libraries(${PROJECT_NAME} Qt6::Core Qt6::Gui Qt6::Widgets)
+ 
+@@ -87,7 +78,7 @@ install(TARGETS ${PROJECT_NAME} DESTINATION /opt/${PROJECT_NAME}/bin)
  
  
  
@@ -33,3 +51,414 @@ index 69622ee..d3b0b68 100644
  
  if(CMAKE_BUILD_TYPE STREQUAL "Coverage")
      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage")
+@@ -104,9 +95,15 @@ set(TEST_SOURCES
+     tests/sto_glmeni_test.cpp
+     tests/sto_test.cpp
+     tests/unesiartikle_test.cpp
++    tests/kategorija_test.cpp
++    tests/izvestaj_test.cpp
++    tests/meni_test.cpp
++    tests/binaryserializer_test.cpp
++    tests/sto_extra_test.cpp
++    tests/rasporeddata_extra_test.cpp
+ )
+ 
+-add_executable(tests ${TEST_SOURCES} ${SOURCES} ${HEADERS})
++add_executable(tests ${TEST_SOURCES} ${SOURCES} ${HEADERS} ${FORMS})
+ target_link_libraries(tests Qt6::Core Qt6::Gui Qt6::Widgets)
+ 
+ set_target_properties(tests PROPERTIES
+diff --git a/Expresso/src/naruci.cpp b/Expresso/src/naruci.cpp
+index aadef6b..26dfa27 100644
+--- a/Expresso/src/naruci.cpp
++++ b/Expresso/src/naruci.cpp
+@@ -95,7 +95,9 @@ void Naruci::addItemInTW(QTableWidget *tw, Artikl *artikl) {
+   tw->setItem(row, 1, itemKolicina);
+   tw->setItem(row, 2, itemCena);
+ 
+-  p->getSto()->setStatus(Sto::OCCUPIED);
++  if (p->getSto()) {
++    p->getSto()->setStatus(Sto::OCCUPIED);
++  }
+ }
+ void Naruci::updateItemInTW(QTableWidget *tw, const QString &naziv) {
+ 
+diff --git a/Expresso/src/porudzbina.cpp b/Expresso/src/porudzbina.cpp
+index 018ac0b..0620c3c 100644
+--- a/Expresso/src/porudzbina.cpp
++++ b/Expresso/src/porudzbina.cpp
+@@ -3,7 +3,7 @@
+ #include <QString>
+ #include <QVector>
+ 
+-Porudzbina::Porudzbina() { artikli = QVector<Artikl *>(); }
++Porudzbina::Porudzbina() : _sto(nullptr) { artikli = QVector<Artikl *>(); }
+ 
+ Porudzbina::Porudzbina(Sto *sto) {
+   _sto = sto;
+diff --git a/Expresso/tests/binaryserializer_test.cpp b/Expresso/tests/binaryserializer_test.cpp
+new file mode 100644
+index 0000000..44554c0
+--- /dev/null
++++ b/Expresso/tests/binaryserializer_test.cpp
+@@ -0,0 +1,30 @@
++#include "../src/artikl.h"
++#include "../src/binaryserializer.h"
++#include <QTemporaryDir>
++#include <catch.hpp>
++
++TEST_CASE("BinarySerializer - save/load round-trip", "[class]") {
++  QTemporaryDir dir;
++  REQUIRE(dir.isValid());
++  BinarySerializer serializer(dir.path());
++
++  SECTION("Sacuvan i ucitan Artikl ima iste podatke") {
++    Artikl original("Espresso", 150, "Kafa", 2);
++    serializer.save(original, "artikal.bin");
++
++    Artikl ucitan;
++    serializer.load(ucitan, "artikal.bin");
++
++    REQUIRE(ucitan.getNaziv() == "Espresso");
++    REQUIRE(ucitan.getCena() == 150);
++    REQUIRE(ucitan.getKategorija() == "Kafa");
++    REQUIRE(ucitan.getKolicina() == 2);
++  }
++
++  SECTION("load() iz nepostojeceg fajla ostavlja objekat nepromenjen") {
++    Artikl a("Cola", 200, "Sokovi");
++    serializer.load(a, "nepostojeci.bin");
++    REQUIRE(a.getNaziv() == "Cola");
++    REQUIRE(a.getCena() == 200);
++  }
++}
+diff --git a/Expresso/tests/izvestaj_test.cpp b/Expresso/tests/izvestaj_test.cpp
+new file mode 100644
+index 0000000..c4075c2
+--- /dev/null
++++ b/Expresso/tests/izvestaj_test.cpp
+@@ -0,0 +1,68 @@
++#include "../src/izvestaj.h"
++#include <QDate>
++#include <QFile>
++#include <catch.hpp>
++
++namespace {
++
++struct DnevniIzvestajCleanup {
++  QString filename;
++
++  explicit DnevniIzvestajCleanup(const QDate &datum)
++      : filename("racuni_" + datum.toString("yyyy_MM_dd") + ".txt") {
++    QFile::remove(filename);
++  }
++
++  ~DnevniIzvestajCleanup() {
++    QFile::remove(filename);
++  }
++};
++
++} // namespace
++
++TEST_CASE("Izvestaj - cuvanje i ucitavanje dnevnog izvestaja", "[class]") {
++  izvestaj iz;
++  QDate danas = QDate::currentDate();
++  DnevniIzvestajCleanup cleanup(danas);
++
++  SECTION("Sacuvan racun se pojavljuje u tekstu dnevnog izvestaja") {
++    iz.sacuvajRacun(250.0, "Kafa i kolac");
++    QString tekst = iz.ucitajdnevniizvestaj(danas);
++
++    REQUIRE_FALSE(tekst.isEmpty());
++    REQUIRE(tekst.contains("Kafa i kolac"));
++  }
++
++  SECTION("ucitajdnevniizvestaj za dan bez racuna vraca prazan string") {
++    QString tekst = iz.ucitajdnevniizvestaj(danas);
++    REQUIRE(tekst.isEmpty());
++  }
++
++  SECTION("dnevniPrihod tacno sabira iznose svih sacuvanih racuna") {
++    iz.sacuvajRacun(250.0, "Kafa i kolac");
++    iz.sacuvajRacun(150.0, "Sok");
++
++    double prihod = iz.dnevniPrihod(danas);
++    REQUIRE(prihod == Approx(400.0));
++  }
++
++  SECTION("ucitajMesecniIzvestaj spaja dnevne izvestaje kao tekst") {
++    iz.sacuvajRacun(200.0, "Kafa");
++    QString mesecni = iz.ucitajMesecniIzvestaj(danas);
++
++    REQUIRE(mesecni.contains("Kafa"));
++  }
++
++  SECTION("Poznati problem sa racunanjem mesecnog prihoda") {
++    iz.sacuvajRacun(200.0, "Kafa");
++
++    double mesecniPrihod = iz.ukupniPrihodMesec(danas);
++    QDate najprometniji = iz.najprometnijiDanMesec(danas);
++    QDate najmanjePrometan = iz.najmanjePrometanDanMesec(danas);
++
++    REQUIRE(mesecniPrihod == 0.0);
++    REQUIRE_FALSE(najprometniji.isValid());
++    REQUIRE(najmanjePrometan ==
++            QDate(danas.year(), danas.month(), 1));
++  }
++}
+diff --git a/Expresso/tests/kategorija_test.cpp b/Expresso/tests/kategorija_test.cpp
+new file mode 100644
+index 0000000..5f6d934
+--- /dev/null
++++ b/Expresso/tests/kategorija_test.cpp
+@@ -0,0 +1,61 @@
++#include "../src/artikl.h"
++#include "../src/kategorija.h"
++#include <catch.hpp>
++
++TEST_CASE("Kategorija - dodavanje, pretraga i brisanje artikala", "[class]") {
++  Kategorija kat("Sokovi");
++
++  SECTION("Dodat artikal se pojavljuje u getArtikli()") {
++    Artikl *a = new Artikl("Fanta", 180, "Sokovi");
++    int rezultat = kat.dodajArtikl(a);
++
++    REQUIRE(rezultat == 0);
++    REQUIRE(kat.getArtikli().size() == 1);
++    REQUIRE(kat.getArtikli()[0]->getNaziv() == "Fanta");
++
++    kat.obrisiArtikl("Fanta");
++    delete a;
++  }
++
++  SECTION("Dodavanje artikla sa vec postojecim nazivom se odbija") {
++    Artikl *a1 = new Artikl("Fanta", 180, "Sokovi");
++    Artikl *a2 = new Artikl("Fanta", 999, "Sokovi");
++    kat.dodajArtikl(a1);
++    int rezultat = kat.dodajArtikl(a2);
++
++    REQUIRE(rezultat == 1);
++    REQUIRE(kat.getArtikli().size() == 1);
++
++    kat.obrisiArtikl("Fanta");
++    delete a1;
++    delete a2;
++  }
++
++  SECTION("getArtiklByNaziv pronalazi dodat artikal") {
++    Artikl *a = new Artikl("Sprite", 170, "Sokovi");
++    kat.dodajArtikl(a);
++
++    Artikl *found = kat.getArtiklByNaziv("Sprite");
++    REQUIRE(found != nullptr);
++    REQUIRE(found->getCena() == 170);
++
++    kat.obrisiArtikl("Sprite");
++    delete a;
++  }
++
++  SECTION("getArtiklByNaziv vraca nullptr za nepostojeci naziv") {
++    Artikl *found = kat.getArtiklByNaziv("NePostoji");
++    REQUIRE(found == nullptr);
++  }
++
++  SECTION("obrisiArtikl uklanja artikal po nazivu") {
++    Artikl *a = new Artikl("Kokakola", 150, "Sokovi");
++    kat.dodajArtikl(a);
++    REQUIRE(kat.getArtikli().size() == 1);
++
++    kat.obrisiArtikl("Kokakola");
++    REQUIRE(kat.getArtikli().size() == 0);
++
++    delete a;
++  }
++}
+diff --git a/Expresso/tests/meni_test.cpp b/Expresso/tests/meni_test.cpp
+new file mode 100644
+index 0000000..2843d2c
+--- /dev/null
++++ b/Expresso/tests/meni_test.cpp
+@@ -0,0 +1,45 @@
++#include "../src/artikl.h"
++#include "../src/meni.h"
++#include <catch.hpp>
++
++TEST_CASE("Meni - kategorije, artikli, serijalizacija", "[class]") {
++  SECTION("addCategory dodaje novu kategoriju") {
++    Meni meni;
++    meni.addCategory("Sokovi");
++    REQUIRE(meni.getKategorije().size() == 1);
++    REQUIRE(meni.getKategorije().contains("Sokovi"));
++  }
++
++  SECTION("addItem dodaje artikal u postojecu kategoriju") {
++    Meni meni;
++    meni.addCategory("Sokovi");
++    Artikl *a = new Artikl("Fanta", 180, "Sokovi");
++    int rezultat = meni.addItem("Sokovi", a);
++    REQUIRE(rezultat == 0);
++  }
++
++  SECTION("deleteCategory uklanja kategoriju iz mape") {
++    Meni meni;
++    meni.addCategory("Sokovi");
++    REQUIRE(meni.getKategorije().size() == 1);
++
++    meni.deleteCategory("Sokovi");
++    REQUIRE(meni.getKategorije().size() == 0);
++  }
++
++  SECTION("toVariant/fromVariant round-trip cuva kategorije i artikle") {
++    Meni meni;
++    meni.addCategory("Sokovi");
++    Artikl *a = new Artikl("Fanta", 180, "Sokovi");
++    meni.addItem("Sokovi", a);
++
++    QVariant sacuvano = meni.toVariant();
++
++    Meni ucitan;
++    ucitan.fromVariant(sacuvano);
++
++    REQUIRE(ucitan.getKategorije().size() == 1);
++    REQUIRE(ucitan.getKategorije().contains("Sokovi"));
++    REQUIRE(ucitan.getKategorije()["Sokovi"]->getArtikli().size() == 1);
++  }
++}
+diff --git a/Expresso/tests/rasporeddata_extra_test.cpp b/Expresso/tests/rasporeddata_extra_test.cpp
+new file mode 100644
+index 0000000..f74b376
+--- /dev/null
++++ b/Expresso/tests/rasporeddata_extra_test.cpp
+@@ -0,0 +1,31 @@
++#include "../src/raspored.h"
++#include "../src/rasporeddata.h"
++#include <QTemporaryDir>
++#include <catch.hpp>
++
++TEST_CASE("RasporedData - save/load round-trip u pravom direktorijumu",
++          "[class]") {
++  QTemporaryDir dir;
++  REQUIRE(dir.isValid());
++
++  SECTION("Sacuvan raspored se ucita nazad pod istim nazivom") {
++    RasporedData rasporedData(dir.path());
++    Raspored *r = new Raspored("TestRaspored");
++    r->setMaxTables(5);
++    rasporedData.addRaspored(r);
++
++    rasporedData.executeSave();
++
++    RasporedData ucitano(dir.path());
++    ucitano.executeLoad();
++
++    REQUIRE(ucitano.getRasporedi()->size() == 1);
++    REQUIRE(ucitano.getRasporedi()->contains("TestRaspored"));
++  }
++
++  SECTION("Prazan direktorijum ucitava nula rasporeda") {
++    RasporedData rasporedData(dir.path());
++    rasporedData.executeLoad();
++    REQUIRE(rasporedData.getRasporedi()->size() == 0);
++  }
++}
+diff --git a/Expresso/tests/sto_extra_test.cpp b/Expresso/tests/sto_extra_test.cpp
+new file mode 100644
+index 0000000..cc86e83
+--- /dev/null
++++ b/Expresso/tests/sto_extra_test.cpp
+@@ -0,0 +1,69 @@
++#include "../src/meni.h"
++#include "../src/sto.h"
++#include <catch.hpp>
++
++TEST_CASE("Sto - dodatni testovi (getteri/setteri, serijalizacija)",
++          "[class]") {
++  SECTION("Podrazumevane vrednosti posle konstrukcije") {
++    Sto *sto = new Sto(7);
++    REQUIRE(sto->getId() == 7);
++    REQUIRE(sto->getWidth() == 150);
++    REQUIRE(sto->getHeight() == 150);
++    REQUIRE(sto->getNumSeats() == 4);
++    REQUIRE(sto->getStatus() == Sto::AVAILABLE);
++    delete sto;
++  }
++
++  SECTION("Setteri menjaju stanje kako se ocekuje") {
++    Sto *sto = new Sto(1);
++    sto->setNumSeats(6);
++    sto->setDegree(45);
++    sto->setWidth(200);
++    sto->setHeight(100);
++    sto->setColor(QColor(Qt::red));
++    sto->setStatus(Sto::OCCUPIED);
++
++    REQUIRE(sto->getNumSeats() == 6);
++    REQUIRE(sto->getDegree() == 45);
++    REQUIRE(sto->getWidth() == 200);
++    REQUIRE(sto->getHeight() == 100);
++    REQUIRE(sto->getColor() == QColor(Qt::red));
++    REQUIRE(sto->getStatus() == Sto::OCCUPIED);
++    delete sto;
++  }
++
++  SECTION("toVariant/fromVariant round-trip cuva broj mesta i poziciju") {
++    Sto *sto = new Sto(3);
++    sto->setMeni(new Meni());
++    sto->setNumSeats(8);
++    sto->setPos(120, 45);
++
++    QVariant sacuvano = sto->toVariant();
++
++    Sto *ucitan = new Sto(0);
++    ucitan->setMeni(new Meni());
++    ucitan->fromVariant(sacuvano);
++
++    REQUIRE(ucitan->getId() == 3);
++    REQUIRE(ucitan->getNumSeats() == 8);
++    REQUIRE(ucitan->pos() == QPointF(120, 45));
++
++    delete sto;
++    delete ucitan;
++  }
++
++  SECTION("fromVariant postavlja podrazumevani Meni") {
++    Sto *sto = new Sto(5);
++    REQUIRE(sto->getMeni() == nullptr);
++
++    QVariantMap map;
++    map.insert("id", 5);
++    map.insert("position", QPointF(0, 0));
++    map.insert("m_numSeats", 4);
++    map.insert("meni", Meni().toVariant());
++    sto->fromVariant(map);
++
++    REQUIRE(sto->getMeni() != nullptr);
++    delete sto;
++  }
++}
+diff --git a/Expresso/tests/tmain.cpp b/Expresso/tests/tmain.cpp
+index c51d6a7..4f5ffff 100644
+--- a/Expresso/tests/tmain.cpp
++++ b/Expresso/tests/tmain.cpp
+@@ -2,7 +2,7 @@
+ #include <QApplication>
+ #include <catch.hpp>
+ 
+-int tmain(int argc, char **argv) {
++int main(int argc, char **argv) {
+   QApplication app(argc, argv);
+   return Catch::Session().run(argc, argv);
+ }
+diff --git a/Expresso/tests/unesiartikle_test.cpp b/Expresso/tests/unesiartikle_test.cpp
+index fdbd518..b5e0d59 100644
+--- a/Expresso/tests/unesiartikle_test.cpp
++++ b/Expresso/tests/unesiartikle_test.cpp
+@@ -1,7 +1,7 @@
+ #include "../src/artikl.h"
+ #include "../src/unesiartikle.h"
+ #include <catch.hpp>
+-TEST_CASE("Testing Sto", "[class]") {
++TEST_CASE("Testing UnesiArtikle", "[class]") {
+   SECTION("Testing unesi artikle") {
+     unesiartikle *ua = new unesiartikle();
+     Artikl *a = new Artikl("cocacola", 250, "sokovi");

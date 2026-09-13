@@ -1,0 +1,30 @@
+# Build files
+build/
+build-*/
+*.o
+*.obj
+CMakeCache.txt
+CMakeFiles/
+compile_commands.json
+
+# Coverage files
+*.gcda
+*.gcno
+unit_tests/coverage.info
+unit_tests/coverage.filtered.info
+unit_tests/coverage_html/
+
+# Fuzzing
+fuzzing/corpus/
+
+# Runtime data
+data/
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Other generated files
+podaci.txt
