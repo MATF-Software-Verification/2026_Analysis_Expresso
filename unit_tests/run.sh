@@ -30,5 +30,10 @@ lcov --rc branch_coverage=1 \
     --list unit_tests/coverage.filtered.info \
     > unit_tests/coverage_summary.txt
 
+genhtml --rc branch_coverage=1 \
+    --output-directory unit_tests/coverage_html \
+    unit_tests/coverage.filtered.info
+
 echo "Unit tests and coverage completed successfully."
 echo "Results: unit_tests/"
+echo "HTML report: unit_tests/coverage_html/index.html"
